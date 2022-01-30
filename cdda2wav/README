@@ -220,7 +220,7 @@ The options can also influence the performance greatly.
 The fastest case is given when the samples don't need to be changed from
 their original form or analysed, that is the output format uses the same
 parameters as the drive: 16-bit samples, stereo at 44100 Hz sample rate
-AND with the same endianess (-Cbig and -Ebig, or -Clittle and -Elittle).
+AND with the same endanness (-Cbig and -Ebig, or -Clittle and -Elittle).
 To be sure all parameters can be given explicitly on the command line.
 This avoids an analysis of cdda2wav.
 
@@ -247,8 +247,8 @@ Options that need more cpu power
 -T	on-the-fly preemphasis filtering
 -F	checking for extremal samples
 -G	checking for differences in both channels
--C<endianess>	if a conversion is required (see below)
--E<endianess>	if a conversion is required (see below)
+-C<endanness>	if a conversion is required (see below)
+-E<endanness>	if a conversion is required (see below)
 -Oaudiotype	if a conversion is required (see below)
 -c 1
 -c s
@@ -258,22 +258,22 @@ Options that need more cpu power
 -a <not 1>
 -r <not 44100>
 
-When are one or two endianess (byte order) conversions required?
+When are one or two endanness (byte order) conversions required?
 ================================================================
-There are three stages where the endianess matters:
+There are three stages where the endanness matters:
 1.) on the input side the cd drive can deliver in two flavors (called F1).
-    When the flavor is unknown, cdda2wav needs to find out the endianess.
+    When the flavor is unknown, cdda2wav needs to find out the endanness.
     A simple voting method is used. Successive samples are compared in both
     flavors and the flavor with the statistically smaller changes is taken. 
     The flavor can be defined with the -C option, avoiding the analysis. 
 2.) For any calculation with samples (and echoing to the sound card),
     the samples are needed in the byte order of the machine (in this case
-    I set 'need_host_order' to yes). The flavor of the machine endianess
+    I set 'need_host_order' to yes). The flavor of the machine endanness
     is called F2.
 3.) Finally, there are two flavors of output sound formats (called F3):
     wav uses little endian samples
     cdr and au use big endian samples
-    If the samples currently in memory have the wrong endianess a
+    If the samples currently in memory have the wrong endanness a
     (possibly second) conversion is required.
 
 This gives the following table:

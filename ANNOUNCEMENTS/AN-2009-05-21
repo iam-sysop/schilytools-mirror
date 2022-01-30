@@ -9,7 +9,7 @@ New features with AN-2009-03-99:
 	'HL-DT-ST' 'DVD-RAM GH22NP20' '1.02'
 	that is in effect with DVD+R media.
 
--	cdda2wav now supports new parameters for the -output-endianess option.
+-	cdda2wav now supports new parameters for the -output-endanness option.
 	"host" or "machine" represent the actual byte order of the host CPU in the current OS.
 
 -	Try to correct all pointers into the growable string buffer in smake

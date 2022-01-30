@@ -194,7 +194,7 @@ deemphasize,T,info-only,J,silent-scsi,Q,\
 cddbp-server*,cddbp-port*,\
 scanbus,device*,dev*,D*,scgopts*,debug#,debug-scsi#,kdebug#,kd#,kdebug-scsi#,ts&,\
 auxdevice*,A*,interface*,I*,output-format*,O*,\
-output-endianess*,E*,cdrom-endianess*,C*,speed#,S#,\
+output-endanness*,E*,cdrom-endanness*,C*,speed#,S#,\
 playback-realtime#L,p#L,md5,M,set-overlap#,P#,sound-device*,K*,\
 cddb#,L#,channels*,c*,bits-per-sample#,b#,rate#,r#,gui,g,\
 divider*,a*,track*,t*,index#,i#,duration*,d*,offset#L,o#L,start-sector#L,\
@@ -537,7 +537,7 @@ ISRC=\t\t%15.15s\n\
 				fputs("unknown\n", info_fp);
 		}
 	}
-	fprintf(info_fp, "Endianess=\t%s\n",
+	fprintf(info_fp, "Endanness=\t%s\n",
 		global.need_big_endian ? "big" : "little");
 	fprintf(info_fp, "# index list\n");
 	output_indices(info_fp, global.trackindexlist[track],
@@ -1126,9 +1126,9 @@ usage()
 OPTIONS:\n\
         [-c chans] [-s] [-m] [-b bits] [-r rate] [-a divider] [-S speed] [-x]\n\
         [-t track[+endtrack]] [-i index] [-o offset] [-d duration] [-F] [-G]\n\
-        [-q] [-w] [-v vopts] [-R] [-P overlap] [-B] [-T] [-C input-endianess]\n\
+        [-q] [-w] [-v vopts] [-R] [-P overlap] [-B] [-T] [-C input-endanness]\n\
         [-e] [-n sectors] [-N] [-J] [-L cddbp-mode] [-H] [-g] [-l buffers] [-D cd-device]\n\
-        [-I interface] [-K sound-device] [-O audiotype] [-E output-endianess]\n\
+        [-I interface] [-K sound-device] [-O audiotype] [-E output-endanness]\n\
         [-A auxdevice] [-paranoia] [-cddbp-server=name] [-cddbp-port=port] [-version]\n"),
 		stderr);
 	/* END CSTYLED */
@@ -1162,8 +1162,8 @@ OPTIONS:\n\
         one sector equivalents 1/75 second.\n\
        start-sector=sector	set absolute start sector.\n\
   (-O) output-format=audiotype	set to wav, au (sun), cdr (raw), aiff or aifc format.\n\
-  (-C) cdrom-endianess=endian	set little, big or guess input sample endianess.\n\
-  (-E) output-endianess=endian	set little or big output sample endianess.\n\
+  (-C) cdrom-endanness=endian	set little, big or guess input sample endanness.\n\
+  (-E) output-endanness=endian	set little or big output sample endanness.\n\
   (-d) duration=seconds		set recording time in seconds or 0 for whole track.\n\
   (-w) -wait			wait for audio signal, then start recording.\n\
   (-F) -find-extremes		find extrem amplitudes in samples.\n\
@@ -1298,9 +1298,9 @@ init_globals()
 	global.nsectors = NSECTORS;	/* sectors to read in one request */
 	global.overlap = 1;		/* amount of overlapping sectors */
 	global.useroverlap = -1;	/* amt of overl. sect. user override */
-	global.need_hostorder = 0;	/* processing needs samples in host endianess */
-	global.in_lendian = -1;		/* input endianess from SetupSCSI() */
-	global.outputendianess = NONE;	/* user specified output endianess */
+	global.need_hostorder = 0;	/* processing needs samples in host endanness */
+	global.in_lendian = -1;		/* input endanness from SetupSCSI() */
+	global.outputendanness = NONE;	/* user specified output endanness */
 	global.findminmax  =  0;	/* flag find extrem amplitudes */
 #ifdef HAVE_LIMITS_H
 	global.maxamp[0] = INT_MIN;	/* maximum amplitude */
@@ -2021,7 +2021,7 @@ do_read(p, total_unsuccessful_retries)
 		set_offset(p, offset);
 		added_size = SectorBurst * CD_FRAMESAMPLES;
 		global.overlap = 0;
-		handle_inputendianess(p->data, added_size);
+		handle_inputendanness(p->data, added_size);
 	} else
 #endif
 	{
@@ -2097,7 +2097,7 @@ do_read(p, total_unsuccessful_retries)
 			} else {
 				ReadCdRom(scgp, p->data, lSector, SectorBurst);
 			}
-			handle_inputendianess(p->data,
+			handle_inputendanness(p->data,
 						SectorBurst * CD_FRAMESAMPLES);
 			if (NULL ==
 				(newbuf = synchronize(p->data,
@@ -3510,9 +3510,9 @@ main(argc, argv)
 		}
 	}
 	if (global.cuefile) {
-		if (global.outputendianess != NONE) {
+		if (global.outputendanness != NONE) {
 			fprintf(stderr,
-			_("W Option -E 'outout endianess' disables generation of cue file!\n"));
+			_("W Option -E 'outout endanness' disables generation of cue file!\n"));
 			global.cuefile = 0;
 		} else if (!global.alltracks) {
 			fprintf(stderr,
@@ -3963,8 +3963,8 @@ gargs(argc, argv)
 	char	*duration = NULL;
 	char	*int_name = DEF_INTERFACE;
 
-	char	*oendianess = NULL;
-	char	*cendianess = NULL;
+	char	*oendanness = NULL;
+	char	*cendanness = NULL;
 	int	cddbp = -1;
 	BOOL	stereo = FALSE;
 	BOOL	mono = FALSE;
@@ -4014,8 +4014,8 @@ gargs(argc, argv)
 			&int_name, &int_name,
 			&audio_type, &audio_type,
 
-			&oendianess, &oendianess,
-			&cendianess, &cendianess,
+			&oendanness, &oendanness,
+			&cendanness, &cendanness,
 			&global.userspeed, &global.userspeed,
 
 			&global.playback_rate, &global.playback_rate,
@@ -4201,38 +4201,38 @@ Rate   Divider      Rate   Divider      Rate   Divider      Rate   Divider\n\
 			global.rectime = -1.0;
 		}
 	}
-	if (oendianess) {
-		if (strcasecmp(oendianess, "little") == 0) {
-			global.outputendianess = LITTLE;
-		} else if (strcasecmp(oendianess, "big") == 0) {
-			global.outputendianess = BIG;
-		} else if (strcasecmp(oendianess, "machine") == 0 ||
-			    strcasecmp(oendianess, "host") == 0) {
+	if (oendanness) {
+		if (strcasecmp(oendanness, "little") == 0) {
+			global.outputendanness = LITTLE;
+		} else if (strcasecmp(oendanness, "big") == 0) {
+			global.outputendanness = BIG;
+		} else if (strcasecmp(oendanness, "machine") == 0 ||
+			    strcasecmp(oendanness, "host") == 0) {
 #ifdef	WORDS_BIGENDIAN
-			global.outputendianess = BIG;
+			global.outputendanness = BIG;
 #else
-			global.outputendianess = LITTLE;
+			global.outputendanness = LITTLE;
 #endif
 		} else {
-			usage2(_("Wrong parameter '%s' for option -E\n"), oendianess);
+			usage2(_("Wrong parameter '%s' for option -E\n"), oendanness);
 		}
 	}
-	if (cendianess) {
-		if (strcasecmp(cendianess, "little") == 0) {
+	if (cendanness) {
+		if (strcasecmp(cendanness, "little") == 0) {
 			global.littleendian = 1;
-		} else if (strcasecmp(cendianess, "big") == 0) {
+		} else if (strcasecmp(cendanness, "big") == 0) {
 			global.littleendian = 0;
-		} else if (strcasecmp(cendianess, "machine") == 0 ||
-			    strcasecmp(cendianess, "host") == 0) {
+		} else if (strcasecmp(cendanness, "machine") == 0 ||
+			    strcasecmp(cendanness, "host") == 0) {
 #ifdef	WORDS_BIGENDIAN
 			global.littleendian = 0;
 #else
 			global.littleendian = 1;
 #endif
-		} else if (strcasecmp(cendianess, "guess") == 0) {
+		} else if (strcasecmp(cendanness, "guess") == 0) {
 			global.littleendian = -2;
 		} else {
-			usage2(_("Wrong parameter '%s' for option -C\n"), cendianess);
+			usage2(_("Wrong parameter '%s' for option -C\n"), cendanness);
 		}
 	}
 	if (cddbp >= 0) {
@@ -4421,8 +4421,8 @@ Rate   Divider      Rate   Divider      Rate   Divider      Rate   Divider\n\
 		bulk = 0;
 
 	global.need_big_endian = global.audio_out->need_big_endian;
-	if (global.outputendianess != NONE)
-		global.need_big_endian = global.outputendianess == BIG;
+	if (global.outputendanness != NONE)
+		global.need_big_endian = global.outputendanness == BIG;
 
 	if (global.no_file)
 		global.fname_base[0] = '\0';

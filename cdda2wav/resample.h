@@ -30,5 +30,5 @@ extern	long		SaveBuffer	__PR((UINT4 *p,
 extern	unsigned char	*synchronize	__PR((UINT4 *p,
 						unsigned SamplesToDo,
 						unsigned TotSamplesDone));
-extern	void		handle_inputendianess __PR((UINT4 *p,
+extern	void		handle_inputendanness __PR((UINT4 *p,
 						unsigned SamplesToDo));

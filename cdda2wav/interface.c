@@ -317,7 +317,7 @@ SetupSCSI(scgp)
 	 *	  (LSB first).
 	 *	  HP CD-Writers need it set to 0.
 	 * NOTE: If you get correct wav files when using sox with the '-x'
-	 *   option, the endianess is wrong. You can use the -C option to
+	 *   option, the endanness is wrong. You can use the -C option to
 	 *   specify the value of global.in_lendian.
 	 */
 

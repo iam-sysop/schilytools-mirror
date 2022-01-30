@@ -132,7 +132,7 @@ gen_prepboot_label(ml)
 		mac_label->image[i].CHSend[1] = 0xff;
 		mac_label->image[i].CHSend[2] = 0xff;
 
-		/* deal with  endianess */
+		/* deal with  endanness */
 		mac_label->image[i].startSect[0] = block & 0xff;
 		mac_label->image[i].startSect[1] = (block >> 8) & 0xff;
 		mac_label->image[i].startSect[2] = (block >> 16) & 0xff;

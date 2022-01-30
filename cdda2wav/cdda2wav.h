@@ -39,7 +39,7 @@
 #define	SHOW_JUSTAUDIOTRACKS	128
 #define	SHOW_MAX		255
 
-/* Endianess */
+/* Endanness */
 #define	GUESS			(-2)
 #define	NONE			(-1)
 #define	LITTLE			0

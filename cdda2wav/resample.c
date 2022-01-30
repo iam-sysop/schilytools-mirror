@@ -92,7 +92,7 @@ static void change_endianness		__PR((UINT4 *pSam,
 						unsigned int Samples));
 static void swap_channels		__PR((UINT4 *pSam,
 						unsigned int Samples));
-static int guess_endianess		__PR((UINT4 *p, Int16_t *p2,
+static int guess_endanness		__PR((UINT4 *p, Int16_t *p2,
 						unsigned int SamplesToDo));
 
 
@@ -606,7 +606,7 @@ ReSampleBuffer(p, newp, samples, samplesize)
 #endif
 
 static int
-guess_endianess(p, p2, SamplesToDo)
+guess_endanness(p, p2, SamplesToDo)
 	UINT4		*p;
 	Int16_t		*p2;
 	unsigned	SamplesToDo;
@@ -665,13 +665,13 @@ guess_endianess(p, p2, SamplesToDo)
 int	jitterShift = 0;
 
 void
-handle_inputendianess(p, SamplesToDo)
+handle_inputendanness(p, SamplesToDo)
 	UINT4		*p;
 	unsigned	SamplesToDo;
 {
 	/*
-	 * if endianess is unknown, guess endianess based on
-	 * differences between succesive samples. If endianess
+	 * if endanness is unknown, guess endanness based on
+	 * differences between succesive samples. If endanness
 	 * is correct, the differences are smaller than with the
 	 * opposite byte order.
 	 */
@@ -686,7 +686,7 @@ handle_inputendianess(p, SamplesToDo)
 			p2++;
 
 		if (((UINT4 *)p2 - p) + (unsigned) 1 < SamplesToDo) {
-			switch (guess_endianess(p, p2, SamplesToDo)) {
+			switch (guess_endanness(p, p2, SamplesToDo)) {
 			case -1: break;
 			case  1: (*in_lendian) = 0;
 #if 0
@@ -710,7 +710,7 @@ handle_inputendianess(p, SamplesToDo)
 
 	/*
 	 * ENDIAN ISSUES:
-	 * the individual endianess of cdrom/cd-writer, cpu,
+	 * the individual endanness of cdrom/cd-writer, cpu,
 	 * sound card and audio output format need a careful treatment.
 	 *
 	 * For possible sample processing (rate conversion) we need
@@ -723,7 +723,7 @@ handle_inputendianess(p, SamplesToDo)
 
 	if (global.need_hostorder && (*in_lendian) != MY_LITTLE_ENDIAN) {
 		/*
-		 * change endianess of delivered samples to native cpu order
+		 * change endanness of delivered samples to native cpu order
 		 */
 		change_endianness(p, SamplesToDo);
 	}

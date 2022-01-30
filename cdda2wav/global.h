@@ -96,7 +96,7 @@ typedef struct global {
 	unsigned		shmsize;
 	long			pagesize;
 	int			in_lendian;
-	int			outputendianess;
+	int			outputendanness;
 	int			findminmax;
 	int			maxamp[2];
 	int			minamp[2];

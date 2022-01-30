@@ -353,7 +353,7 @@ auinfo(name, track, trackp)
 		else if (strncmp(p, "once", 2) == 0)
 			tp->flags &= ~(TI_COPY|TI_SCMS);
 	}
-	p = readtag("Endianess=");
+	p = readtag("Endanness=");
 	p = readtag("Index=");
 	if (p && *p && isdao)
 		setindex(p, &trackp[track]);

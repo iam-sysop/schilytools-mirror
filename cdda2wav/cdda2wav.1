@@ -167,14 +167,14 @@ for stereo recording with both channels swapped
 The default is stereo recording.
 .RE
 .TP
-.BI \-C " endianess
+.BI \-C " endanness
 .TP
-.BI \-cdrom\-endianess " endianess
-sets endianess of the input samples to 'little', 'big', 'machine' or 'guess' to override defaults.
+.BI \-cdrom\-endanness " endanness
+sets endanness of the input samples to 'little', 'big', 'machine' or 'guess' to override defaults.
 The value 'machine' or 'host' is evaluated as the actual byte order of
 the host CPU in the current OS.
 .sp
-The default is to detect cdrom endianess automatically.
+The default is to detect cdrom endanness automatically.
 .TP
 .B \-cuefile
 Create a CDRWIN compatible CUE file.
@@ -233,10 +233,10 @@ sets the time for whole track.
 .sp
 The default is to extract the whole track.
 .TP
-.BI \-E " endianess
+.BI \-E " endanness
 .TP
-.BI \-output\-endianess " endianess
-sets endianess of the output samples to 'little', 'big' or 'machine' to 
+.BI \-output\-endanness " endanness
+sets endanness of the output samples to 'little', 'big' or 'machine' to
 override the default which is 'network byte order' (big endian).
 The value 'machine' or 'host' is evaluated as the actual byte order of
 the host CPU in the current OS.
@@ -1477,14 +1477,14 @@ will set the transfer size to the specified sectors per request.
 .SS "Set number of ring buffer elements"
 .B \-l " buffers"
 will allocate the specified number of ring buffer elements.
-.SS "Set endianess of input samples"
-.B \-C " endianess"
+.SS "Set endanness of input samples"
+.B \-C " endanness"
 will override the default settings of the input format.
-Endianess can be set explicitly to "little", "big" or "machine" or to the automatic
-endianess detection based on voting with "guess".
-.SS "Set endianess of output samples"
-.B \-E " endianess"
-(endianess can be "little", "big" or "machine") will override the
+Endanness can be set explicitly to "little", "big" or "machine" or to the automatic
+endanness detection based on voting with "guess".
+.SS "Set endanness of output samples"
+.B \-E " endanness"
+(endanness can be "little", "big" or "machine") will override the
 default settings of the output format.
 .SS "Verbose option"
 .B \-v " itemlist"
@@ -1621,8 +1621,8 @@ legal in
 .B WAV
 format). Most CD-Writers insist on audio samples in a bigendian format.
 Now cdda2wav supports the 
-.B \-E " endianess"
-option to control the endianess of the written samples.
+.B \-E " endanness"
+option to control the endanness of the written samples.
 .PP
 If your hardware is fast enough to run cdda2wav
 uninterrupted and your CD drive is one of the 'perfect' ones, you will
