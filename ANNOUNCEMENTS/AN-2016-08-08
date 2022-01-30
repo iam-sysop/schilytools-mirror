@@ -102,7 +102,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	Bourne Shell: The test for POSIX_BOSH_PATH has been modified to permit
 	to have symlinks as the path string used by POSIX_BOSH_PATH.
 
--	Bourne Shell: A new #define DO_POSIX_SH allows to do "set -o posix" by
+-	Bourne Shell: A new #define DO_POSIX_SH allows one to do "set -o posix" by
 	default in case the last path name component from argv[0] of the shell
 	is "sh". This is recommended on Linux in case bosh is used as /bin/sh.
 

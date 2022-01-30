@@ -102,7 +102,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	"[a-c]" is expected.
 
 -	Bourne Shell: Added a new #ifdef to use with "make COPTX=-DCASE_XPRINT"
-	that allows to see better debugging messages for case statements
+	that allows one to see better debugging messages for case statements
 	together with "set -x".
 
 -	patch: Fix for CVE-2018-1000156

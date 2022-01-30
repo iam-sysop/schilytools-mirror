@@ -42,7 +42,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 	The new smake version mentioned above is smake-1.2.4
 
--	libschily::getargs.c: Added a new flag that allows to implement POSIX
+-	libschily::getargs.c: Added a new flag that allows one to implement POSIX
 	option rule #5:
 
 		One or more options without option-arguments, followed by

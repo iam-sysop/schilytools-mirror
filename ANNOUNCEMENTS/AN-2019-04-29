@@ -63,7 +63,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	libschily/waitid.c & sh/jobs.c: waitid() emulation now returns
 	SIGCONT in si_status in case of WIFCONTINUED()
 
--	libdbgmalloc: A new macro DBG_MALLOC_MARK() allows to mark allocated
+-	libdbgmalloc: A new macro DBG_MALLOC_MARK() allows one to mark allocated
 	memory from libdbgmalloc with the current filename and line number.
 
 -	libdbgmalloc/bsh: alloc.c now includes a #undef DBG_MALLOC to allow
@@ -125,7 +125,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	cdda2wav: The cdda2wav version strings printed on other locations
 	than cdda2wav -version now also mention the version date of cdda2wav.
 
--	readcd: a new option spt=# allows to limit the number of secters
+-	readcd: a new option spt=# allows one to limit the number of secters
 	per transfer for testing purposes.
 
 -	libfind/star: the verbose listing code has ben restructured to have
@@ -156,7 +156,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	Bourne Shell: "trap -- ..." now correctly handles "--" even if the next
 	argument is "-".
 
--	Bourne Shell: trap now supports a new option -p that allows to restore
+-	Bourne Shell: trap now supports a new option -p that allows one to restore
 	the whole trap state using the following commands:
 
 		old_traps=$(trap -p)
@@ -249,7 +249,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

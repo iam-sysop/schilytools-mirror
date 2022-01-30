@@ -63,7 +63,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	and this comes with an "open()" prototype. We needed to change a local
 	variable "open" to "openbr" to avoid a GCC warning.
 
--	bsh/Bourne Shell: a new function lchdir() allows to cd(1) into long
+-	bsh/Bourne Shell: a new function lchdir() allows one to cd(1) into long
 	path names.
 
 -	bsh: the builtin pwd(1) now supplies a buffer with 8192 bytes of space
@@ -83,7 +83,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	bsh/Bourne Shell: The test(1) builtin now uses a new function lstatat()
 	that permits access to files without path name length limitation.
 
--	Bourne Shell: A new #ifdef -DO_ALWAYS_POSIX_SH allows to make
+-	Bourne Shell: A new #ifdef -DO_ALWAYS_POSIX_SH allows one to make
 	the shell to always start up in 100% POSIX mode.
 
 -	Bourne Shell: a new Bourne Shell variant has been created: "pbosh".

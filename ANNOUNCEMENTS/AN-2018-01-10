@@ -91,7 +91,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	interface in order to be moved from a Bourne Shell internal builtin
 	into a Bourne Shell dynamic lodable builtin.
 
--	libboshcmd: added a new shared library that allows to test the "find"
+-	libboshcmd: added a new shared library that allows one to test the "find"
 	command as a loadable Bourne Shell builtin. In order to compile and
 	install a shared libboshcmd, do the following:
 

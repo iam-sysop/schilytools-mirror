@@ -126,7 +126,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	patch: The name "spatch" now defaults to POSIX behavior plus all
 	extensions (POSIX + Wall+). Before, it was strict POSIX mode.
 
--	patch: New function fetchtz() allows to support the old "ctime()"
+-	patch: New function fetchtz() allows one to support the old "ctime()"
 	based time format from "diff -c" to use a timezone as e.g. with
 	patchfiles created by "hg export".
 

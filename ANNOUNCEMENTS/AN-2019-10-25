@@ -97,7 +97,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	This results in a POSIX compliant make for Ultrix...
 
 	NOTE that yopu need to use -i because there is currently no method
-	in the Schily Makefile system that allows to disable the creation of
+	in the Schily Makefile system that allows one to disable the creation of
 	shared libraries on platforms that do not support shared libs.
 
 	Also note that you cannot use "dmake" (SunPro Make) on Ultrix yet
@@ -315,7 +315,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

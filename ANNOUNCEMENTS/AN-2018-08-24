@@ -96,7 +96,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 		smake MAN=
 
--	Makefile system: a new target "localize" allows to tell the make file 
+-	Makefile system: a new target "localize" allows one to tell the make file
 	system to make the localized versions of scripts.
 
 -	Makefile system: The internal macros CFLAGS & CPPFLAGS have been renamed
@@ -177,7 +177,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	cdda2wav: the scripts cdda2ogg und cdda2mp3 are now automatically
 	localized when calling "make all".
 
--	Bourne Shell: smake COPTX=-DNO_SIGPROF allows to run the shell
+-	Bourne Shell: smake COPTX=-DNO_SIGPROF allows one to run the shell
 	with gprof.
 
 -	Bourne Shell: the compile variant "osh" has been renamed to "obosh".
@@ -213,7 +213,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	the 1980s, the character 0xFF was used as another DEL character.
 
 -	ved: the binding function tables now have 256 instead of just 128
-	entries. This allows to implement the character 0xFF as plain character
+	entries. This allows one to implement the character 0xFF as plain character
 	but also makes the 8-bit control characters beep (for an error) instead
 	of replicating the function of the related 7-bit control charactes.
 

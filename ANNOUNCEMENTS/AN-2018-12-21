@@ -65,7 +65,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	This helps to see where a disk has problems that always fails with
 	big reads but never fails with the retries.
 
--	sdd: added a new option seczize= that allows to specify a sector 
+-	sdd: added a new option seczize= that allows one to specify a sector
 	size != 512 bytes and makes sdd ready for recovering disks with larger
 	sector sizes.
 
@@ -115,7 +115,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	SCCS: libcomojb::doget() now calls sclose() and sfree().
 
 -	SCCS: libcomojb::parseN() now recognizes a space character as a
-	placeholder for a flag that is ignored. This allows to make sccs.c
+	placeholder for a flag that is ignored. This allows one to make sccs.c
 	simpler as it is now able to modify the behavor of called low level
 	programs, e.g. to use "-N SCCS" to get a vanilla delta(1) or to use
 	"-N+SCCS" to get the behavior of "sccs delget".
@@ -174,7 +174,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

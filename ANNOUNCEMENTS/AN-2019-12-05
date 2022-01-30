@@ -216,7 +216,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	checking the -r option argument for compliance.
 
 -	star: The new-volume-script= script is now called at the end of
-	_every tape_, even at the last one. This now allows to have a script
+	_every tape_, even at the last one. This now allows one to have a script
 	that automatically renames a standard archive name into numbered
 	archive names when a tree should be splitted into chunks, e.g. with
 	this command line:
@@ -244,7 +244,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	in order to behave the same way as the closed source Solaris pax
 	does.
 
--	star: Star now allows to combine the option list=names with -find
+-	star: Star now allows one to combine the option list=names with -find
 	This is useful, whenever a list of filenames is longer than ARG_MAX and
 	thus cannot be used in the star command line after -find.
 
@@ -261,7 +261,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	The second command takes that list and puts only those files into
 	the archive that have been modified during the past 100 days.
 
--	star: A new option "-dump+" allows to have the "SCHILY.volhdr.hostname"
+-	star: A new option "-dump+" allows one to have the "SCHILY.volhdr.hostname"
 	meta data field filled out even when not making dumps with an
 	associated dump level. This helps to remember the origin of tar
 	archives.
@@ -344,7 +344,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

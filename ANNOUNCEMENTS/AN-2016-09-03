@@ -57,7 +57,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	Bourne Shell: PS1, PS2, and PS4 are now subject to macro expansion
 	before they are used.
 
--	Bourne Shell: a new option "set -o promptcmdsubst" allows to switch
+-	Bourne Shell: a new option "set -o promptcmdsubst" allows one to switch
 	on command substitution and arithmetic substitution for PS1, PS2,
 	and PS4. POSIX does not require this, but other shells do this even
 	though it is seen as a seurity risk. To avoid the security problem

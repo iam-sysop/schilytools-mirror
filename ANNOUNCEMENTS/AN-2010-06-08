@@ -85,7 +85,7 @@ New features with AN-2010-03-99:
 -	Mkisofs does no longer archive the output file if it is part of the archives directory
 	tree.
 
--	New option -data-change-warn allows to prevent mkisofs from aborting when
+-	New option -data-change-warn allows one to prevent mkisofs from aborting when
 	a file changes size.
 
 	-data-change-warn is implemented via errctl="WARN|GROW|SHRINK *"
@@ -112,7 +112,7 @@ New features with AN-2010-03-99:
 	mountcd/mountcd.1 readcd/readcd.1 udiff/udiff.1 pxupgrade/pxupgrade.1 star/spax.1
 	sfind/sfind.1 hdump/hdump.1
 
--	A new make macro STRIPFLAGS allows to install stripped binaries by calling
+-	A new make macro STRIPFLAGS allows one to install stripped binaries by calling
 	smake STRIPFLAGS=-s install
 
 -	Conf-files in /etc/default are now installed 0644

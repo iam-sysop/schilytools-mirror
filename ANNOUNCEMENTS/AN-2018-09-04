@@ -199,7 +199,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	extract the problematic symlink and as a result, the later file 
 	will be extracted into the local directory tree.
 
--	star: a new option -no-secure-links allows to disable the secure
+-	star: a new option -no-secure-links allows one to disable the secure
 	default behavior.
 
 -	star: Added a new help output to the error statistics in case that

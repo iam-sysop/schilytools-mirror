@@ -74,7 +74,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	Bourne Shell: fixed a bug that triggers when sh is compiled on a
 	platform without mem*() functions.
 
--	Bourne Shell: New compile time #define USE_BYTES allows to enforce
+-	Bourne Shell: New compile time #define USE_BYTES allows one to enforce
 	to use the libschily *bytes() functions instead of the mem*() functions
 	to be able to run the BSD performance analyzer "gprof" on them.
 

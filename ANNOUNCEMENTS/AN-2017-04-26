@@ -71,7 +71,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	RULES/rules.ins: before installing symlinks or hardlinks, the
 	directory the links are in is made.
 
--	RULES: Added a new method that allows to skip building C++ based code
+-	RULES: Added a new method that allows one to skip building C++ based code
 	in case we are on a platform that does not support a C++ compiler.
 	This is needed for SunPro Make that was written on C++.
 	Note that if you are e.g. on SunOS-4.x where the system does not include

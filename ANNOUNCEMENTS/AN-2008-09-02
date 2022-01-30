@@ -3,7 +3,7 @@ New features with AN-2008-09-02:
 -	Next attempt wo work around the non-autoconf friendly implementation
 	of GNU gettext and GNU libiconv.
 
--	A new autoconf test allows to check whether the installed system shell
+-	A new autoconf test allows one to check whether the installed system shell
 	(/bin/sh) properly aborts with failed commands in "sh -ce 'cmd'".
 
 	If failed simple commands in "sh -ce 'cmd'" do not abort complex

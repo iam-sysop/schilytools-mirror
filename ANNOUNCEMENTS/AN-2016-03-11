@@ -62,7 +62,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	Thanks to a report from Stéphane Chazelas. A minor piece of code
 	was forgotten when the final -find integration did take place.
 
--	Star now supports "-C directory" before a -find option. This allows to
+-	Star now supports "-C directory" before a -find option. This allows one to
 	call e.g.:
 		star -copy -C /from/path -find . /to/path
 

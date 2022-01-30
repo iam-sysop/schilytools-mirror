@@ -43,7 +43,7 @@ New features with AN-2008-11-02:
 -	cdrtools bumped to 2.01.01a53
 
 -	Make dure that the DVD and BluRay drivers do not lower the default timeout.
-	cdrecord timeout=# now always allows to raise the default timeout to a larger
+	cdrecord timeout=# now always allows one to raise the default timeout to a larger
 	value.
 
 -	Added a workaround to prevent the Lite-ON BD B LH-2B1S/AL09

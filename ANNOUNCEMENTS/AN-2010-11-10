@@ -1,7 +1,7 @@
 New features with AN-2010-11-10:
 
 -	The linker map files are now processed via "cpp" (or $CC -E) and
-	the output is stored in $(ARCHDIR). This allows to have a single
+	the output is stored in $(ARCHDIR). This allows one to have a single
 	linker map file source for all platforms.
 
 -	New autoconf test for a working cpp.

@@ -134,7 +134,7 @@ NEW FEATURES:
 	running.
 
 	Adding support for .INCLUDE_FAILED: to SunPro Make however still 
-	makes sense, as support for .INCLUDE_FAILED: in SunPro Make allows to
+	makes sense, as support for .INCLUDE_FAILED: in SunPro Make allows one to
 	automatically add initial basic support for new compilers to a 
 	development tree using the schily makefile system or similar build 
 	systems, while being on a platform with pre-existig SunPro Make 
@@ -301,7 +301,7 @@ SCCS THOUGHTS:
 		This is needed in order to e.g. know the file names and file
 		specific SIDs/state that corresponds to a project global SID.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

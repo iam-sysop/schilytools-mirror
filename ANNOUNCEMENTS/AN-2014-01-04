@@ -36,7 +36,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	include/schily/stdio.h now implements code that partially unhides
 	the FILE * data structures from the 64 bit Solaris libc.
-	This allows to implement a getc_unlocked() macro even for 64 bit
+	This allows one to implement a getc_unlocked() macro even for 64 bit
 	Solaris as done by libc, so libschily is able to achieve similar
 	stdio I/O performance, which is needed to be able to implement
 	a printf() in libschily that is faster than printf() from libc.
@@ -53,7 +53,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	libschily/fprformat.c
 	New function fprformat() in libschily is implementing the same
-	direct interface as doprnt() from libc and thus allows to implement
+	direct interface as doprnt() from libc and thus allows one to implement
 	printf() faster than the printf() from libc on Solaris.
 
 -	libschily/jsprintf.c

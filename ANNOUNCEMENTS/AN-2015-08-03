@@ -58,7 +58,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	libschily/resolvepath.c now #define's lstat stat if lstat()
 	is missing.
 
--	libschily/error.c now allows to be compiled without weak
+-	libschily/error.c now allows one to be compiled without weak
 	symbols by using -DNO_WEAK_SYMBOLS
 
 -	libshedit: work around a name space problem in libshedit that
@@ -147,7 +147,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	only works with the AT&T UNIX linker (e.g. available in the
 	UNIX "ld" on OpenSolaris) but not with "gld" on Linux.
 
-	The current implementation however allows to check whether
+	The current implementation however allows one to check whether
 	e.g. interrupt handling works between the Bourne Shell and
 	libfind. We did already identify a name space problem with
 	libshedit and the Bourne Shell as a result of includind the
@@ -156,7 +156,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	The main reason for making it a builtin is that a
 	shell builtin can call shell procedures without a need
 	to fork()/exec(). I plan to add a new find(1) primary "-call"
-	to libfind that allows to call other shell builtins from libfind.
+	to libfind that allows one to call other shell builtins from libfind.
 
 	Another reason is to have a modern find(1) implementation 
 	available by default, e.g. an implementation that supports a
@@ -177,14 +177,14 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	POSIX.1-issue-8 method for adding shell builtins bejond the
 	list of shell builtins documented by POSIX today.
 
--	Bourne Shell: a new #define FORCE_WAITID allows to enforce
+-	Bourne Shell: a new #define FORCE_WAITID allows one to enforce
 	using waitid() even on platforms that fail to pass the
 	related autoconf test. This helps to test the Bourne Shell on
 	non-POSIX platforms that like to make their waitid() implementation
 	POSIX compliant, such as Linux or Mac OS X.
 
 -	Bourne Shell: struct sysnod added a new struct member "sysflg"
-	that allows to implement the builtin command "builtin" and to
+	that allows one to implement the builtin command "builtin" and to
 	mark different types of builtin commands.
 
 -	Bourne Shell: "struct sysnod commands" now sets BLT_SPC for special
@@ -292,7 +292,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	Bourne Shell: Support for pipes from arbitrary other file descriptors
 	than #1 (stdout) was added. This feature is enabled via "set -o fdpipe"
-	and allows to precede the pipe symbol by a digit that describes file
+	and allows one to precede the pipe symbol by a digit that describes file
 	descriptor # to use instead of stdout, e.g. 2| for a pipe from stderr.
 	This feature is based on a feature from bsh introduced in 1991.
 

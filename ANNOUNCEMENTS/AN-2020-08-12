@@ -269,7 +269,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	specific map file.
 
 -	SCCS: sccslog now supports a new option maxdelta=timespec that
-	allows to configure the timespan for previous "sccs delget" calls
+	allows one to configure the timespan for previous "sccs delget" calls
 	that shall be bundled into a virtual commit. The syntax is the same
 	as with -mtime xxx in modern find(1) implementations.
 
@@ -449,7 +449,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		This is needed in order to e.g. know the file names and file
 		specific SIDs/state that corresponds to a project global SID.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

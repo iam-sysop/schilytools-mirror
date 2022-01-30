@@ -71,7 +71,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 	LDFRAMEWORKS=
 
-	that allows to add Apple specific libraries.
+	that allows one to add Apple specific libraries.
 
 -	Added a new WIN32_LIBS= macro for Win-DOS specific libraries.
 	These libraries have to be specified in the portable -lfoo

@@ -48,7 +48,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	libschily/comerr.c: Made Cstyle clean
 
--	libschily/fstream.c: fsgetc() now allows to return more expeptional
+-	libschily/fstream.c: fsgetc() now allows one to return more expeptional
 	return values from the transfer callback function. Before, only
 	0 and EOF have been supported, now other negative values are OK as well.
 
@@ -73,7 +73,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 		^H::*
 
-	to disable a mapping for backspace. This allows to disable a mapping
+	to disable a mapping for backspace. This allows one to disable a mapping
 	that was introduced from TERMCAP. This feature is e.g. used to disable
 	the mapping:
 

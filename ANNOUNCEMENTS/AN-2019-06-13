@@ -58,7 +58,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		10 million tries, it was not known otherwise.
 
 -	cal: The code now correctly deals with a switch date that affects
-	December and January. This allows to verify switch dates that become
+	December and January. This allows one to verify switch dates that become
 	effective with January 1st and need to have all skipped days in
 	December.
 
@@ -170,7 +170,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

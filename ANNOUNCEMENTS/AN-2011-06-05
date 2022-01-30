@@ -214,7 +214,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	Mkisofs now correctly supports El Torito multi boot entries by introducing
 	a Boot Dection Header before a list of alternate boot entries.
 
--	New option -eltorito-platform allows to set the El Torito platform id
+-	New option -eltorito-platform allows one to set the El Torito platform id
 	for a boot entry or for a list of boot entries. Supported values for the
 	parameter are:
 
@@ -228,7 +228,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 	-	#	an arbitrary numerical value
 
--	New option -modification-date allows to specify a predictable UUID for grub.
+-	New option -modification-date allows one to specify a predictable UUID for grub.
 
 	The syntax is: YYYY[MM[DD[HH[MM[SS]]]]][.hh][+-GHGM] and is forgiving
 	enought to accept the pupular POSIX date format created by:

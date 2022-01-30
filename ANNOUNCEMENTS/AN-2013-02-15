@@ -38,7 +38,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	avoid a GCC warning when compiling readcd.c
 
--	libschily::fexecv() now allows to use the parameter "ac" with the
+-	libschily::fexecv() now allows one to use the parameter "ac" with the
 	value -1 to indicate that the arg count is to be determined by the
 	NULL pointer at the end of the arg list.
 

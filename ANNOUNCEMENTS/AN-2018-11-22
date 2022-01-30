@@ -129,7 +129,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	introduced in July 2018 while adding support for very long path names.
 
 	dolchmodat() is needed/used when a platform uses different file mode
-	bits than defined by POSIX. In this case, the fix allows to compile
+	bits than defined by POSIX. In this case, the fix allows one to compile
 	star with DJGPP again.
 
 -	star: added a new timestamp to the star version.

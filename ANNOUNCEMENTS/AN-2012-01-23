@@ -57,10 +57,10 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	These functions are needed in order to emulate fchdir() on platforms
 	that do not support fchdir().
 
--	The function defltcntl() in libdeflt is now working and allows to
+-	The function defltcntl() in libdeflt is now working and allows one to
 	select a case insensitive mode.
 
--	New function defltsect() in libdeflt allows to create sub-sections
+-	New function defltsect() in libdeflt allows one to create sub-sections
 	in configuration files. These subsections need to be named:
 	"[section-name]" and the '[' must be at the beginning of a line.
 

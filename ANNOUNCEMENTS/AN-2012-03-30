@@ -52,7 +52,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	Bourne Shell: sh/word.c has been reordered to avoid calling the history
 	editor (that calls malloc()) while a string is build on the "stack".
 
--	Bourne Shell: New builtin command "alloc" allows to manually check the
+-	Bourne Shell: New builtin command "alloc" allows one to manually check the
 	storage for corruption.
 
 -	Bourne Shell: New funktion fill_pat() allows better storage checking.

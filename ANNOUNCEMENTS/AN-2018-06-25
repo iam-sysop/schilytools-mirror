@@ -137,7 +137,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	star::buffer.c Added a new error message in checkerrs() for a buffer
 	overflow in path name substitution.
 
--	star::dirtime.c: new function flushdirtimes() allows to flush the dir
+-	star::dirtime.c: new function flushdirtimes() allows one to flush the dir
 	stack as a callback from the comexit() procedure.
 
 -	star::dirtime.c: the code is now able to handle file names with

@@ -71,22 +71,22 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	mkisofs: A new option -noatime has been introduced in order to use the
 	modification time of the files instead of the last access time.
 
-	This allows to create reproducible ISO-90660 filesystem images.
+	This allows one to create reproducible ISO-90660 filesystem images.
 
 -	mkisofs: A new option -creation-date has been introduced in order to
 	use the supplied time stamp instead of the current time in the PVD.
 
-	This allows to create reproducible ISO-90660 filesystem images.
+	This allows one to create reproducible ISO-90660 filesystem images.
 
 -	mkisofs: A new option -effective-date has been introduced in order to
 	use the supplied time stamp instead of the current time in the PVD.
 
-	This allows to create reproducible ISO-90660 filesystem images.
+	This allows one to create reproducible ISO-90660 filesystem images.
 
 -	mkisofs: A new option -expiration-date has been introduced in order to
 	use the supplied time stamp instead of a zeroed time in the PVD.
 
-	This allows to create reproducible ISO-90660 filesystem images.
+	This allows one to create reproducible ISO-90660 filesystem images.
 
 -	mkisofs: The option -modification-date=spec did not work if specified
 	as -modification-date=spec, but it worked if specified as
@@ -154,7 +154,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

@@ -59,8 +59,8 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	Bourne Shell: The "type" builtin now knows about aliases
 
--	Bourne Shell: make COPTX=-DNO_SIGSEGV now allows to compile
-	a shell that  does not catch SIGSEGV and thus allows to debug
+-	Bourne Shell: make COPTX=-DNO_SIGSEGV now allows one to compile
+	a shell that  does not catch SIGSEGV and thus allows one to debug
 	memory problems.
 
 -	Bourne Shell: aliases now support begin alias expansion for the

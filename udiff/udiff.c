@@ -351,8 +351,8 @@ static	int		xgrow = 1024;
 
 	/*
 	 * Use getdelim() to include the newline in the hash.
-	 * This allows to correctly deal with files that do not end in a newline
-	 * and this allows to handle nul bytes in the line.
+	 * This allows one to correctly deal with files that do not end in a newline
+	 * and this allows one to handle nul bytes in the line.
 	 */
 	if (olsz == 0)		/* If first file is mmap()d and 2nd is not */
 		olbf = NULL;	/* could be != NULL from mmap() space */

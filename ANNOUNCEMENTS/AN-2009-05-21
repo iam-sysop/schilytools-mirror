@@ -115,7 +115,7 @@ New features with AN-2009-03-99:
 
 -	smake now includes a -C dir option
 
--	New makefile "Mocsw" allows to create packages for "opencsw"
+-	New makefile "Mocsw" allows one to create packages for "opencsw"
 
 -	RULES/rules.csw enhanced to allow to overwrite EMAIL= and HOTLINE= from
 	the make command line.

@@ -104,7 +104,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	This was a result of a code review for SchilliX-ON by
 	Eric Ackermann
 
--	smake: A new option -a has been added. This option allows to tell
+-	smake: A new option -a has been added. This option allows one to tell
 	smake not to set up the automake specific make macros MAKE_ARCH,
 	MAKE_OS and similar. The identifying macro MAKE_NAME=smake is still
 	set up in order to allow to select the right make specific include
@@ -230,7 +230,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

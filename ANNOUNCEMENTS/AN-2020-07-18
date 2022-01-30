@@ -250,7 +250,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	before.
 
 -	SCCS: libcomobj: date_ab.c now supports a new function parse_datez()
-	that allows to specify a datetime record with nanoseconds and with
+	that allows one to specify a datetime record with nanoseconds and with
 	a timezone. This is used for the new option -Xdate=datetime.
 
 -	SCCS: libcomobj/bulk.c: a leading "./" is stripped off the input
@@ -498,7 +498,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		This is needed in order to e.g. know the file names and file
 		specific SIDs/state that corresponds to a project global SID.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

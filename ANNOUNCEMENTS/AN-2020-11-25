@@ -117,7 +117,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 	as the default behavior and thus is in conflict with the existing base
 	assumption of the autoconf system that minimalistic C-code used for
-	compile/link allows to check for the existence of a specific function
+	compile/link allows one to check for the existence of a specific function
 	in libc without a need to know which system #include file is used to
 	define a prototype for that function.
 
@@ -169,7 +169,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	libxtermcap: The new version does no longer free the allocated buffer
 	and copies the failing filename into this buffer in case that an
-	open() call fails. This allows to find the filename of the failing
+	open() call fails. This allows one to find the filename of the failing
 	termcap database in case that the last entry from the TERMPATH
 	could not be opened.
 
@@ -440,7 +440,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		This is needed in order to e.g. know the file names and file
 		specific SIDs/state that corresponds to a project global SID.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

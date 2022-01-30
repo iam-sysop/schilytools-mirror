@@ -60,7 +60,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	patch: The programs tests/random/cmptest.sh and tests/random/gentest.sh
 	from the test suite now allow to set the "diff" program for the tests
 	e.g. by calling: "diff=/tmp/diff tests/random/cmptest.sh"
-	This allows to use them to verify a specific implementation of the
+	This allows one to use them to verify a specific implementation of the
 	"diff" command.
 
 -	SCCS diff(1) command: smaller changes to make the code compile again

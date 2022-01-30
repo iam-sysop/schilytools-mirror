@@ -1,6 +1,6 @@
-Libfind allows to be used for adding find(1) like command line features
-to other programs (e.g. star and mkisofs). It also allows to implement
-a find(1) command in 10 lines of code and it allows to be used as shell
+Libfind allows one to be used for adding find(1) like command line features
+to other programs (e.g. star and mkisofs). It also allows one to implement
+a find(1) command in 10 lines of code and it allows one to be used as shell
 built in function.
 
 Example code for a complete find(1) program:

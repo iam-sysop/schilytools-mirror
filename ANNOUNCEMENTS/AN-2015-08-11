@@ -125,7 +125,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	minor problems with certain comments in shell scripts. For this reason,
 	hash commands are turned off by default.
 
--	Bourne Shell: "set -o hostprompt" allows to set PS1 to automatically
+-	Bourne Shell: "set -o hostprompt" allows one to set PS1 to automatically
 	be "<hostname> <username>> " which is the default prompt used by "bsh"
 	since 1985.
 	

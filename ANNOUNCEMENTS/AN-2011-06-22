@@ -24,13 +24,13 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	COPYING updated for "cpp" and "patch"
 
--	A new rule RULES/profiled.lnk allows to call:
+-	A new rule RULES/profiled.lnk allows one to call:
 
 	smake COPTX=-pg LDOPTX=-pg LINKMODE=profiled
 
 	to create binaries that use gprof.
 
--	New function permtostr() in libschily allows to convert a
+-	New function permtostr() in libschily allows one to convert a
 	mode_t like stat.st_mode into a chmod compliant string like:
 
 		u=rw,g=r,o=r

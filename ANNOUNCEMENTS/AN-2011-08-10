@@ -51,7 +51,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	change tail +2 to tail -n +2 in RULES/cc-mcs.rul to allow to use
 	the Microsoft compiler again
 
--	A new environment variable MKLINKS_COPY allows to tell all
+-	A new environment variable MKLINKS_COPY allows one to tell all
 	MKLINS scripts to generate file copies rather than symlinks.
 	Call:
 		MKLINKS_COPY=true

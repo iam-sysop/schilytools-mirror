@@ -103,7 +103,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	as well.
 
 -	star: The function stoli() added a new parameter "fieldwidth" that
-	allows to configure when a "unterminated octal number" warning is
+	allows one to configure when a "unterminated octal number" warning is
 	printed. This is needed since this function is used for 8 byte and
 	for 12 byte fields.
 
@@ -133,10 +133,10 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	star/libschily: Added new error checking codes:
 
-	"ID"	allows to control error behaviour with range errors in uid_t
+	"ID"	allows one to control error behaviour with range errors in uid_t
 		and gid_t values.
 
-	"TIME"	allows to control error behaviour with range errors in time_t
+	"TIME"	allows one to control error behaviour with range errors in time_t
 
 -	star: Creating multi volume archives without using the FIFO did dump
 	core. We thus no longer set mp->chreel = TRUE; when the FIFO has 
@@ -282,7 +282,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

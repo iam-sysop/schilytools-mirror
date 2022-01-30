@@ -57,7 +57,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	smake: When a default command for an implicit target is executed,
 	the result is now searched for in the list of object directories.
-	This allows to use the current smake again with older versions
+	This allows one to use the current smake again with older versions
 	of the schily makefilesystem where the include directives for
 	auto-dependency files are not using "-include" but "include".
 

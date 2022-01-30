@@ -2,7 +2,7 @@ New features with AN-2009-11-19:
 
 -	VMS rules now define library names to XX.olb instead of libXX.a
 
--	New define "NO_STATIC_CONF" allows to switch of the default static
+-	New define "NO_STATIC_CONF" allows one to switch of the default static
 	config on VMS
 
 -	schily/utypes.h enhanced to allow to define maxint_t which is 

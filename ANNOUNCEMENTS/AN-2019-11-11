@@ -153,7 +153,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 	Thanks to Robert Clausecker for reporting
 
--	SCCS: Added a new delta type 'U' that allows to tell get(1) to remove
+-	SCCS: Added a new delta type 'U' that allows one to tell get(1) to remove
 	the g-file. Such SCCS history files are going to be used as
 	placeholders for removed files in the upcomming project mode.
 
@@ -245,7 +245,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

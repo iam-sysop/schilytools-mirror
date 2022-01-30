@@ -48,7 +48,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	The Bourne Shell now reads the scripts /etc/sh.shrc and $HOME/.shrc
 	when it is launched as interactive shell. The content of the
-	enviroment variable ENV allows to control this behavior:
+	enviroment variable ENV allows one to control this behavior:
 
 	-	If ENV is defined at startup, it's content is evaluated
 		and then used as the file name instead of the default
@@ -81,12 +81,12 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		by calling "set -o localiases".
 
 
--	A new command "alias" in the Bourne Shell allows to set up or list
+-	A new command "alias" in the Bourne Shell allows one to set up or list
 	aliases. As the Bourne Shell supports advanced aliases, the alias
 	command implements many options that are not part of the POSIX
 	standard.
 
--	A new command "unalias" in the Bourne Shell allows to remove
+-	A new command "unalias" in the Bourne Shell allows one to remove
 	aliases. As the Bourne Shell supports advanced aliases, the unalias
 	command implements many options that are not part of the POSIX
 	standard.

@@ -104,7 +104,7 @@ New features with AN-2008-08-14:
 -	Cdda2wav child_pid variable moved into gloval var structure.
 
 -	The new -interactive option has now been stabilized for a first integration that
-	allows to replace libcdio for sound-juicer to come to an implementation without
+	allows one to replace libcdio for sound-juicer to come to an implementation without
 	license violations.
 
 -	Reduced the minimal cdrecord write speed of a ultraspeed CD-RW 

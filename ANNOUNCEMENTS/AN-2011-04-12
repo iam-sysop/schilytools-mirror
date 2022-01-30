@@ -68,7 +68,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	try to keep SCSI status and error codes when doing a manual GET SENSE
 	on AIX, UnixWare, VMS, Linux Parallel Port, Apollo Domain
 
--	The val(1) cmmand now includes a -T (debug) option that allows to get 
+-	The val(1) cmmand now includes a -T (debug) option that allows one to get
 	much better mesages when a SCCS history file is corrupted. Use:
 	sccs val -T filename
 

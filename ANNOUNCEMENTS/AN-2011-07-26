@@ -198,7 +198,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	The termcap compiler now avoids a coredump in compile mode (using if=)
 	when TERM= or TERMCAP= are not set. Thanks to Yuri Pankov for reporting.
 
--	The termcap compiler now allows to use the -tc option together with
+-	The termcap compiler now allows one to use the -tc option together with
 	the if= option (in compile mode).
 
 -	SCCS avoids to use the local any() function in favor of strchr()

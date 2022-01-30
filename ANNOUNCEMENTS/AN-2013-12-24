@@ -43,7 +43,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	cdda2wav did get a major overhoul for libparanoia that may
 	make the extract quality better up to a factor of 100x:
 
-	A new suboption "readahead=" for paraopts= allows to modify
+	A new suboption "readahead=" for paraopts= allows one to modify
 	the read ahead buffer size to make it large ebough for the amount
 	of RAM in modern drives.
 
@@ -55,7 +55,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	quadratical way.
 
 -	Better documentation for the libparanoia interface in cdda2wav
-	allows to better understand how it works and how modifying 
+	allows one to better understand how it works and how modifying
 	parameters could influence the extract quality.
 
 -	Fixed some typos in cdrecord

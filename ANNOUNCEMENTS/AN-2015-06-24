@@ -49,7 +49,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	include/schily/wait.h add a missing closing bracket for Haiku
 
 -	include/schily/wait.h added CLD_* macros and the enum idtype_t in case
-	they are missing. This allows to implement a waitid() emulation.
+	they are missing. This allows one to implement a waitid() emulation.
 
 -	include/schily/wait.h now includes schily/signal.h in case that
 	the local /usrinclude/sys/wait.h is non-POSIX and does not
@@ -111,9 +111,9 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	the values from struct siginfo .si_code into a string.
 
 -	Bourne Shell: added a new function wait_id() for backtick expansion
-	that allows to get the whole 32 bits from the exit(2) parameter.
+	that allows one to get the whole 32 bits from the exit(2) parameter.
 
--	Bourne Shell: smake COPTX=-DNO_WAITID allows to enforce the waitid()
+-	Bourne Shell: smake COPTX=-DNO_WAITID allows one to enforce the waitid()
 	emulation via waitpid() to enforce the old behavior where the
 	exit code is limited to 8 bits.
 
@@ -122,11 +122,11 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	the future. They currently only work correctly for non-builtin
 	commands where the status can be retrieved from waitid().
 
--	Bourne Shell: A new function sitos() allows to convert negative
+-	Bourne Shell: A new function sitos() allows one to convert negative
 	integers correctly. This is mainly needed in order to be able to
 	print the full signed int exitcode retrieved via waitid().
 
--	Bourne Shell: exit(1) now allows to use negative parameters. This
+-	Bourne Shell: exit(1) now allows one to use negative parameters. This
 	reflects the fact that exit(2) has a signed integer as parameter.
 
 -	Bourne Shell: New readonly status variables have been added. These

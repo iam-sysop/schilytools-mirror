@@ -60,13 +60,13 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	libschily: added a waitid() emulation based on waitpid()
 
 -	librmt: a new function rmtrsh() has been added to set up a different
-	method to initiate a remote connection. This allows to tell librmt
+	method to initiate a remote connection. This allows one to tell librmt
 	to make connections with "ssh" instead of using "rcmd()" or "rsh".
 
 	Thanks to a hint from Kristýna Streitová <kstreitova@suse.com>
 
 -	librmt: a new function rmtrmt() has been added to set up a different
-	path to the remote rmt server program. This allows to tell librmt
+	path to the remote rmt server program. This allows one to tell librmt
 	to make connections to servers that are on a path other than "/etc/rmt".
 
 -	librmt: The man pages have been enhanced.

@@ -60,7 +60,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	Schily SunPro Make program by avoiding the need to call "uname" and
 	similar in every sub-make program in order to fill in several
 	architecture specific macros. This is done by exporting them into the
-	environment via the make file directive "export". It allows to use the
+	environment via the make file directive "export". It allows one to use the
 	values in sub-makes without again being forced to call external
 	programs.
 
@@ -149,14 +149,14 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	support for multiple include files with a single include statement.
 
 -	SunPro Make: The program now supports the directives "export" and
-	"unexport". This allows to avoid repeated calling of shell commands
+	"unexport". This allows one to avoid repeated calling of shell commands
 	to fill macros in sub-make programs.
 
 -	SunPro Make: The program now supports the "readonly" directive.
-	This allows to prevent macros from being modified later.
+	This allows one to prevent macros from being modified later.
 
 -	SunPro Make: The program now supports the "-include" directive.
-	This allows to continue after a failing include statement.
+	This allows one to continue after a failing include statement.
 
 -	SunPro Make: "dmake -version" now returns Copyright information for the
 	authors (Sun Microsystems and Jörg Schilling) together with the other

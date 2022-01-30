@@ -52,7 +52,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	Patch: A function pfatal() that uses strerror() has been added to get
 	better error messages for syscall errors.
 
--	Patch: New option -W-posix allows to revert the effect os a previous
+-	Patch: New option -W-posix allows one to revert the effect os a previous
 	-W+ and -Wposix option.
 
 -	Patch: is*() functions like isspace() now get an argument that is casted

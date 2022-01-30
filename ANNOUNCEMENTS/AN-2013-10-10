@@ -159,7 +159,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	The Bourne Shell now also recognises special argv[0] when
 	passes: "jbosh", "-jbosh", "pfbosh", "-pfbosh", "rbosh", "-rbosh"
 
--	The Burne Shell now allows to switch from using system include files 
+-	The Burne Shell now allows one to switch from using system include files
 	to portable schily include files via:
 
 		-DSCHILY_INCLUDES

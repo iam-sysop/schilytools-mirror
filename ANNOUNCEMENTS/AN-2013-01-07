@@ -84,7 +84,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 
 -	cpp now includes a yacc'd version of cpy.y in cpp/cpypre.c
-	that allows to have a full blown cpp even on platforms that do not
+	that allows one to have a full blown cpp even on platforms that do not
 	include the "yacc" command.
 
 -	Make the Bourne shell compile again with a K&R compiler.

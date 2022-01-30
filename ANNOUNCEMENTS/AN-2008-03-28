@@ -7,7 +7,7 @@ New features with AN-2008-02-23:
 	via system(3).
 
 -	libshedit new. This is really parts of the "bsh" shell together with
-	some wrapper code that allows to use the bsh history editing and
+	some wrapper code that allows one to use the bsh history editing and
 	file name completion code from a shell like the Bourne Shell that
 	does not use stdio.
 
@@ -46,7 +46,7 @@ files in /usr/include fixed.....
 -	Star compiles again with K&R compiler
 
 -	Star now supports a new diffopts= parameter called "symperm".
-	This allows to exclude permission comparison for symlinks.
+	This allows one to exclude permission comparison for symlinks.
 
 -	Better portability for SCCS
 

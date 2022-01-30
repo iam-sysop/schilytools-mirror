@@ -48,7 +48,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	The Bourne Shell's man page now mentions the -m option for set(1)
 	that was present since SVr4 as well as the new set(1) option -P
-	that allows to turn sh(1) into pfsh(1).
+	that allows one to turn sh(1) into pfsh(1).
 
 -	The Bourne Shell now has been verified to work correctly on:
 

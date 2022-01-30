@@ -26,7 +26,7 @@ New features with AN-2009-06-10:
 -	The Bourne Shell now resets the mbtowc() shift state when needed by calling
 	mbtowc(NULL, NULL, 0). This is needed in special on Mac OS X.
 
--	The Bourne Shell now allows to change the history length by changing the value of
+-	The Bourne Shell now allows one to change the history length by changing the value of
 	the environment variable HISTORY= during the lifetime of the Bourne Shell.
 
 

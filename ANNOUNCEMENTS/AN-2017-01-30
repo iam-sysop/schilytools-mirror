@@ -48,7 +48,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	libshedit/bsh: the history output function now supports a new flag
 	to turn on/off the mapping from '\n' (ASCII newline) -> '\0205' (ANSI
-	newline) within a history line. This allows to switch on/off support
+	newline) within a history line. This allows one to switch on/off support
 	for a multi-line history.
 
 	To manage a multi line history, newlines in a history entry are

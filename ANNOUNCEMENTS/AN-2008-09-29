@@ -43,7 +43,7 @@ New features with AN-2008-09-29:
 
 
 -	The cdrecord DVD multi-border code from May 2007 has been made OpenSource.
-	Multi-Border is the DVD multi-session equivalent. It allows to write
+	Multi-Border is the DVD multi-session equivalent. It allows one to write
 	up to 1024 sessions on a single DVD.
 
 	The code currently covers the most important case of writing to DVD-R/DVD-RW

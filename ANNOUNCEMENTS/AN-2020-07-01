@@ -261,7 +261,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	create lock files for SCCS history files.
 
 -	SCCS: The commands admin and delta now support a new option -Xuser=name
-	that allows to specify a different user (programmer) name for a delta.
+	that allows one to specify a different user (programmer) name for a delta.
 	By default, the logname is used as it has been always done before.
 
 -	SCCS: admin fixed a potential buffer overflow related to the user
@@ -574,7 +574,7 @@ Conclusions from the last changes:
 
 		*** Done, see above. ***
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

@@ -74,7 +74,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	Star was bumped to version 1.5.3
 
--	Added supportlinks for amd64-freebsd-clang*. This allows to use non-
+-	Added supportlinks for amd64-freebsd-clang*. This allows one to use non-
 	automake aware make implementations like gmake.
 
 -	libschily/faccessat.c with a faccessat() was added. This has been forgotten

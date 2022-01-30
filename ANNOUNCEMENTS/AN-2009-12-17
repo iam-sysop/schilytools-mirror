@@ -4,7 +4,7 @@ New features with AN-2009-11-99:
 	All default rules are now based on Pattern Matching Rules.
 	This speeds up smake.
 
--	POSIX.1-2008 is UNIX compliant again and allows to call
+-	POSIX.1-2008 is UNIX compliant again and allows one to call
 	commands via "sh -ce command". Smake honors this if in POSIX 
 	mode. Note that this was already the default smake behavior in
 	Non-POSIX mode.
@@ -14,7 +14,7 @@ New features with AN-2009-11-99:
 -	The .IGNORE and .SILENT special targets now work in a POSIX compliant
 	way.
 
--	A new special target ".SSUFFIX_RULES" allows to disable Simple Suffix
+-	A new special target ".SSUFFIX_RULES" allows one to disable Simple Suffix
 	Rules.
 
 -	smake -p now gives more fine grained results and separates
@@ -38,7 +38,7 @@ New features with AN-2009-11-99:
 -	The smake common code for Suffix macro substitution and
 	Pattern macro substitution has been fixed to correctly distibguish between
 	both methods and to no longer try to expand % in suffix macro substitutions.
-	This allows to use things like:
+	This allows one to use things like:
 
 		smake COPTX=-errwarn=%all
 

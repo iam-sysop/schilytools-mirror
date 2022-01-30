@@ -70,7 +70,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	Bourne Shell
 
 -	bsh now supports the option -o aliasowner=user as the Bourne Shell does.
-	This allows to set up a common su alias for both bsh and sh:
+	This allows one to set up a common su alias for both bsh and sh:
 
 		alias 'su=su $SHELL -o aliasowner=$LOGNAME'
 

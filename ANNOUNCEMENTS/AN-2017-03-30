@@ -80,7 +80,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	Thanks to a hint from Thomas Niederreiter <tn@xcdroast.org>
 
 -	Bourne Shell: _macro() is now an alternate global interface to macro()
-	that does not call fixstak() and thus allows to be used to create
+	that does not call fixstak() and thus allows one to be used to create
 	intermediate strings.
 
 -	Bourne Shell: ps_macro() now comes with a second argument "perm" that

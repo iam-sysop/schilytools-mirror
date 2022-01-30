@@ -44,7 +44,7 @@ New features with AN-2008-01-10:
 -	Fixed a mkisofs -help typo (unides -> inodes)
 
 -	New command termcap(1).
-	This is a termcap compiler that allows to better deal with termcap
+	This is a termcap compiler that allows one to better deal with termcap
 	definition files.
 
 Author:

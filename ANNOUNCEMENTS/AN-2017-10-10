@@ -93,7 +93,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	This is needed because Solaris uses a different makedev() for 64 bit
 	commands and 32 bit commands.
 
-	The new SCHILY.devminorbits allows to convert struct stat.st_dev
+	The new SCHILY.devminorbits allows one to convert struct stat.st_dev
 	as used by SCHILY.dev into a number that is compatible to the system
 	used by the local program. Note that SCHILY.dev is currently not
 	used in extract mode, but a value in the archive that does not fit

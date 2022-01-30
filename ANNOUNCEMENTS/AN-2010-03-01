@@ -161,7 +161,7 @@ New features with AN-2010-03-01:
 -	cdda2wav now by default writes a file "xxx.cdtext" with raw binary
 	CD-Text data in case cdda2wav was told to retrieve CD-Text.
 
--	A new option -no-textfile allows to disable the creation of the file "audio.cdtext"
+-	A new option -no-textfile allows one to disable the creation of the file "audio.cdtext"
 	This version of cdda2wav creates a file "audio.cdtext" or similar (depending on
 	the set up file name base) in case that there is CD-Text on the medium and that
 	the drives supports to read the CD-Text data with MMC SCSI commands.
@@ -172,7 +172,7 @@ New features with AN-2010-03-01:
 	files created by cdda2wav honor the file name base.
 
 -	Cdda2wav by default fills empty track specific CD-Text data with the Disk global
-	value (if present). A new option -no-textdefaults allows to disable this fallback
+	value (if present). A new option -no-textdefaults allows one to disable this fallback
 	and leaves the related fields empty if they are empty on the mester CD.
 
 -	Fixed a problem with cdda2wav -interactive (used by GNOME GSTREAMER CD-DAE plugin)
@@ -180,10 +180,10 @@ New features with AN-2010-03-01:
 	session past the last audio track.
 
 -	Cdda2wav now permits to use "max" for the endtrack number. This
-	allows to specify e.g. -t2+max for a list of tracks from track #2
+	allows one to specify e.g. -t2+max for a list of tracks from track #2
 	to the last audio track on the disk.
 
--	New option -cuefile allows to tell cdda2wav to create a CDRWIN CUE
+-	New option -cuefile allows one to tell cdda2wav to create a CDRWIN CUE
 	file. This currently only works together with wither -tall, or with
 	-t0+max or -t1+max.
 
@@ -204,7 +204,7 @@ New features with AN-2010-03-01:
 	complex task as there are drives that do not allow to read the
 	hidden data before track 1.
 
--	New option -no-hidden-track allows to prevent cdda2wav from scanning
+-	New option -no-hidden-track allows one to prevent cdda2wav from scanning
 	for a hidden audio track.
 
 -	Cdda2wav now writes the new tag "Track=" into the *.inf files that

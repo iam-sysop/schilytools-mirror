@@ -123,7 +123,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	New SCCS SID specific history file extension "^AS ..."
 
--	New error code "co27" allows to distinguish a general chescksum error from
+-	New error code "co27" allows one to distinguish a general chescksum error from
 	a SID specific checksum error.
 
 -	SCCS prs -d supports :SX: to print SID specific history file extension
@@ -193,7 +193,7 @@ SCCS-5.05 is 6x faster than RCS-5.8 and consumes 7x less CPU time than RCS-5.8.
 	"kenc". It was enhanced for robustness, to support dates past 1999
 	and it now supports binary files also.
 
--	New SCCS subcommand "istext" allows to check whether a file may
+-	New SCCS subcommand "istext" allows one to check whether a file may
 	be archived as pure text file or whether encoding is needed.
 
 -	The SCCS convert program (sccs cvt) now correctly converts time stamps

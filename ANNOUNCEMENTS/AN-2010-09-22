@@ -2,7 +2,7 @@ New features with AN-2010-09-22:
 
 -	The macros XARCH_GEN & XARCH_OPT are now in RULES/cc-sunpro*.rul
 
--	The include file include/schily/ccomdefs.h now allows to disable
+-	The include file include/schily/ccomdefs.h now allows one to disable
 	the printf() format checks for GCC with -DNO_PRINTFLIKE
 	This is needed in order to allow star to compile in the Solaris ON
 	cosolidation as GCC id too dumb for the printf() extensions.
@@ -76,7 +76,7 @@ New features with AN-2010-09-22:
 
 	-	The length of identifiers was raised from 8 to 128
 
-	-	A new option -T allows to switch back to 8 char identifiers.
+	-	A new option -T allows one to switch back to 8 char identifiers.
 
 	-	The number of supported -U/-D options was enhanced from 20 to 64
 

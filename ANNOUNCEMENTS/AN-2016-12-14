@@ -56,10 +56,10 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	mkisofs: New option -isort behaves like -sort but ignores the case of
 	filenames in the sort file.
 
--	mkisofs: new option -hide-ignorecase allows to ignore case with the 
+-	mkisofs: new option -hide-ignorecase allows one to ignore case with the
 	-hide* options and with -exclude-list
 
--	mkisofs: New option -no-allow-lowercase allows to revert the effect to
+-	mkisofs: New option -no-allow-lowercase allows one to revert the effect to
 	-allow-lowercase from macro options like -untranslated-filenames or
 	-iso-level 4
 

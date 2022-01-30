@@ -31,7 +31,7 @@ New features with AN-2009-01-05:
 
 -	rscsi: Raise the SCSI bus numer limit to 1024 to allow the new Linux ATA mapping.
 
--	cdrecord: New driver "mmc_bdrom" is used for profile 0x40 and allows to
+-	cdrecord: New driver "mmc_bdrom" is used for profile 0x40 and allows one to
 	retrieve the ADIP data for BD-R media that is reported as BD-ROM
 	by some drives.
 

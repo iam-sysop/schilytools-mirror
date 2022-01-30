@@ -232,7 +232,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	star: The unit tests now include the portability tests from Michal Górny
 
--	A new option cli=name (must be argv[1]) allows to select all
+-	A new option cli=name (must be argv[1]) allows one to select all
 	supported command line interfaces (star, suntar, gnutar,
 	pax, cpio) when called as star.
 
@@ -271,7 +271,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 	-	Full UNICODE support has been added for tar headers.
 
-	-	A new option cli=name (must be argv[1]) allows to select all
+	-	A new option cli=name (must be argv[1]) allows one to select all
 		supported command line interfaces (star, suntar, gnutar,
 		pax, cpio) when called as star.
 
@@ -315,7 +315,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

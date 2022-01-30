@@ -62,7 +62,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	parsing loop with bsh -c '...'. Thanks to a report for Stephane Chazelas.
 
 -	Bourne Shell: the computation of th CPU percentage now uses a long long
-	if possible and thus allows to compute correct results even when the 
+	if possible and thus allows one to compute correct results even when the
 	CPU time was below one milli-second.
 
 -	Bourne Shell: dir*/ is no longer left unexpanded but now expands to dir/
@@ -108,7 +108,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	Bourne Shell: set -C, set -o noclobber and >| name are now supported.
 
--	Bourne Shell: exec -a name args..... now allows to set argv[0] via the
+-	Bourne Shell: exec -a name args..... now allows one to set argv[0] via the
 	-a argument.
 
 -	The following bug was been detected in the Bourne Shell:

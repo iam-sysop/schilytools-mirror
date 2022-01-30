@@ -46,7 +46,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	Added support for cygwin32_wow (not the already present cygwin32_wow64).
 
--	The makefile system now allows to use:
+-	The makefile system now allows one to use:
 
 		COPTX=-DNO_PRAGMA_WEAK
 
@@ -58,7 +58,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	linker supports to link against external weak symbols in another
 	file. For this reason, a handcrafted complest was written.
 	This (currently) should fail on Cygwin due to a Cygwin bug.
-	A platform that allows to link against weak symbols defines
+	A platform that allows one to link against weak symbols defines
 	HAVE_LINK_WEAK. This permits the system to automatically detect
 	usability once e.g. linking on Cygwin will be fixed.
 

@@ -83,7 +83,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	fully implement all *at() interfaces, since star started to support
 	really long path names in July 2018.
 
--	cpp: A new option -B allows to honor C++ comment.
+-	cpp: A new option -B allows one to honor C++ comment.
 
 	This option was available in the Closed Source Solaris implementation
 	as well, but it was missing from the Reiser original source.
@@ -199,7 +199,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

@@ -68,7 +68,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	Better error messages in mkisofs/apple.c
 
--	mkisofs now inplements a new option -legacy that allows to get back the
+-	mkisofs now inplements a new option -legacy that allows one to get back the
 	options -H/-L/-P that have been deprecated in 2002 and disabled in 2006
 	in the definition from the 1990s.
 	If you like to use this feature, write a wrapper shell script that calls:

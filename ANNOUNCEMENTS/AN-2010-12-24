@@ -59,7 +59,7 @@ New features with AN-2010-12-24:
 	make the long time stamp format the default in the future, so I encourage
 	the Linux kernel folks to add support for this time format.
 
--	isoinfo now supports the new option -find and (via libfind) allows to use
+-	isoinfo now supports the new option -find and (via libfind) allows one to use
 	find expressions on ISO-9660 images. If the find expression neither contains
 	-print nor -ls and isoinfo is called:
 

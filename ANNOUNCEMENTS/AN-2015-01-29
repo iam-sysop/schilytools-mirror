@@ -47,7 +47,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	loadable libs are present. The latter two will get a POSIX emulation
 	layer if available.
 
--	Smake now allows to disable the built-in echo command by specifying
+-	Smake now allows one to disable the built-in echo command by specifying
 
 		make COPTX=-DNO_MYECHO
 
@@ -141,7 +141,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	New SCCS source file sccs/lib/comobj/src/lhash.c implements a
 	string hash for programmer names.
 
--	SCCS libcomobj now allows to keep a list of programmer names for
+-	SCCS libcomobj now allows one to keep a list of programmer names for
 	each SID. This is done with hashed strings to limit the needed
 	memory space for that operation.
 

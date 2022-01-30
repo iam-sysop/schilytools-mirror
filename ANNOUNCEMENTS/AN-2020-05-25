@@ -186,7 +186,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	managed together and the version 1.0 allows the first proect release
 	to become 1.1
 
--	SCCS: sccs.c added a new option -s. "sccs init -s" now allows to 
+-	SCCS: sccs.c added a new option -s. "sccs init -s" now allows one to
 	initialize a directory tree without creating a
 	$SRC_ROOT/.sccs/SCCS/s.changeset history file. This signals SCCS
 	to work in single file mode.
@@ -238,7 +238,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

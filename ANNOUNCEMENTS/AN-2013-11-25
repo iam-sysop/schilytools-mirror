@@ -60,7 +60,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	privileges already and thus the programs cannot be used for
 	privilege escalations anymore.
 
--	Libfind now allows to check for -type P (Solaris event port).
+-	Libfind now allows one to check for -type P (Solaris event port).
 	A missing "case 'P':" was added to the parser.
 
 -	Cdrtools bumped to 3.01a19

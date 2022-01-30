@@ -213,7 +213,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	Bourne Shell: rmfunctmp() now has a "base" parameter like rmtemp() to
 	limit the removed files to files newer than a limit.
 
--	Bourne Shell: New variable "xiotemp" allows to limit the files
+-	Bourne Shell: New variable "xiotemp" allows one to limit the files
 	removed by rmtemp() from inside done() to files newer than a limit.
 
 -	Bourne Shell: added a forgotten initialization for hentry.next in hashserv.c

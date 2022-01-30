@@ -136,7 +136,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	Bourne Shell: jobs.c do not try to call nice() on platforms where
 	nice() does not exist (e.g. Haiku).
 
--	Bourne Shell: Added experimental code that allows to redefine the
+-	Bourne Shell: Added experimental code that allows one to redefine the
 	buffer size used by the internal file I/O buffering.
 
 -	Bourne Shell: The function readwc() has been slightly reordered to

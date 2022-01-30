@@ -80,7 +80,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	libfind: The new primaries -chatime, -chctime, -chmtime allow to
 	set the time stamps in struct stat to arbitrary values.
 
--	libfind: A new primaries -chfile allows to set the modified struct
+-	libfind: A new primaries -chfile allows one to set the modified struct
 	stat values from -chown, -chgrp, -chmod, -chatime, -chctime, -chmtime
 	to the file.
 
@@ -94,7 +94,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	sfind: new primaries -chatime, -chctime, -chmtime
 
--	sfind: The new primary -chfile allows to set the modified struct
+-	sfind: The new primary -chfile allows one to set the modified struct
 	stat values from -chown, -chgrp, -chmod, -chatime, -chctime, -chmtime
 	to the file.
 

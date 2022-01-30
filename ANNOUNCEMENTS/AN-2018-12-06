@@ -55,7 +55,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		anymore on platforms without vfork(). This problem has been
 		fixed.
 
--	patch: The patch unit test suite now allows to disable the random delta
+-	patch: The patch unit test suite now allows one to disable the random delta
 		tests that take a long time but verify whether patch is able
 		to deal with arbitrary changes in the files. To disable the
 		random tests call:
@@ -98,7 +98,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	SCCS: prs: now prints the SCCS v6 unified random using the new keyword
 		:Gr:
 
--	SCCS: The sccs unit test suite now allows to disable the random delta
+-	SCCS: The sccs unit test suite now allows one to disable the random delta
 		tests that take a long time but verify whether sccs is able
 		to deal with arbitrary changes in the files. To disable the
 		random tests call:
@@ -159,7 +159,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	now tells admin to use the computed related g-file name to initialize
 	history files on bulk mode.
 
-	With this change, admin now allows to e.g. use the -N option to set
+	With this change, admin now allows one to e.g. use the -N option to set
 	flags in a larger list of files by e.g. calling "admin -NSCCS -fx *.c".
 
 -	SCCS: sccscvt: When converting from SCCS v4 to SCCS v6, the initial path
@@ -210,9 +210,9 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	SCCS: libcomobj::bulkprepare() The struct member N->n_dir_name is now
 	set to NULL in case that we did not do a chdir().
 
--	SCCS: libcomobj  New function freeN() allows to free Nparms.n_prefix
+-	SCCS: libcomobj  New function freeN() allows one to free Nparms.n_prefix
 
--	SCCS: libcomobj  New function Ndbg() allows to to debug bulkprepare(),
+-	SCCS: libcomobj  New function Ndbg() allows one to to debug bulkprepare(),
 	e.g. the result from parseN().
 
 -	SCCS: libcomobj::set_init_path() fixed a bug that could cause a core
@@ -331,7 +331,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

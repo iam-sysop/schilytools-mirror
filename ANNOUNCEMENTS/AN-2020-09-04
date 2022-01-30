@@ -221,7 +221,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	SCCS: The unit tests now work with gmake and dmake as well.
 
 	This did not work anymore with the last version of schilytools, after
-	adding support that allows to put the SCCS test code/data on a dedicated
+	adding support that allows one to put the SCCS test code/data on a dedicated
 	"tmpfs" filesystem has been added to speed up tests on Linux as a work
 	around for the slow filesystems on Linux.
 
@@ -285,7 +285,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	SCCS: The delta(1) command now may be configured to use "fsdiff" as
 	default diff program by compiling delta(1) with -DUSE_FSDIFF
 
-	In that case, "delta -b ..." allows to tell delta(1) tu use "bdiff"
+	In that case, "delta -b ..." allows one to tell delta(1) tu use "bdiff"
 	as before.
 
 	The switch to use fsdiff by default will be made later after more
@@ -475,7 +475,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		This is needed in order to e.g. know the file names and file
 		specific SIDs/state that corresponds to a project global SID.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the

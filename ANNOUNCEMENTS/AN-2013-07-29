@@ -37,8 +37,8 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	is used by RaspberryPI).
 
 -	The Bourne Shell now implements a new option -o aliasowner=name
-	that allows to tell the shell that an additional owner is safe for
-	alias files "$HOME/.globals" and ".locals". This allows to implement
+	that allows one to tell the shell that an additional owner is safe for
+	alias files "$HOME/.globals" and ".locals". This allows one to implement
 	"su" aliases that start a shell that loads the aliases of the calling
 	user.
 

@@ -47,7 +47,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 -	printf: Added a new standalone printf implementation based on the
 	file printf.c from the Bourne Shell. It aims to be compatible with
-	both POSIX and the Solaris /usr/bin/printf. This allows to replace
+	both POSIX and the Solaris /usr/bin/printf. This allows one to replace
 	the closed source printf from Solaris by our printf implementation.
 
 -	Schily.Copyright updated

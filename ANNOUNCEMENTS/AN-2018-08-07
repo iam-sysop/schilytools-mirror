@@ -74,11 +74,11 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	Instead, it did look endlessly doing nothing. This bug was only present
 	in case of the optimized variant that uses movecbytes() to copy blocks.
 
--	libfind: added support for a new feature: -call allows to do calls into
+-	libfind: added support for a new feature: -call allows one to do calls into
 	the shell that started "find" as a builtin program. This is approx.
 	40x faster than using -exec.
 
--	libfind: A new function walkcwd() allows to chdir() back from the start
+-	libfind: A new function walkcwd() allows one to chdir() back from the start
 	directory (that has been reached by calling walkhome()) to the
 	directory where the treewalker has been before calling walkhome().
 

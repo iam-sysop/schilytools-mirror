@@ -407,10 +407,10 @@ programs now (hopefully) call gettext() for all strings that need localization.
 -	SCCS: sccs.c Added support for new separate macro string defintions
 	that apply to the "new mode".
 
--	SCCS: sccs.c New code allows to specify -N options specific to
+-	SCCS: sccs.c New code allows one to specify -N options specific to
 	macro stgring defitions.
 
--	SCCS: sccs.c New environment "SCCS_NOEXEC" allows to disable command
+-	SCCS: sccs.c New environment "SCCS_NOEXEC" allows one to disable command
 	execution for debugging purposes.
 
 -	SCCS: New version timestamp for SCCS commands lists 2019
@@ -447,7 +447,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 		$PROJECTHOME/.sccs/SCCS/z.changeset) to maintain a project
 		global lock.
 
-	-	Find/verify a complete transactional model that allows to repair
+	-	Find/verify a complete transactional model that allows one to repair
 		complex changes to the set of files for a project that have
 		been aborted in the middle. The current idea is to create the
 		file $PROJECTHOME/.sccs/changeset with the deltas to the
