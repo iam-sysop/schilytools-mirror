@@ -387,7 +387,7 @@ main(ac, av)
 	 * the following measures:
 	 *
 	 *	-	Clearly state that the current version is an
-	 *		inofficial (modified) version and thus may have bugs
+	 *		unofficial (modified) version and thus may have bugs
 	 *		that are not present in the original.
 	 *
 	 *	-	Print your support e-mail address and tell people that
@@ -406,7 +406,7 @@ main(ac, av)
 	 * In fact, it applies to any version of cdrecord.
 	 *
 	 * I am sorry for the inconvenience but I am forced to do this because
-	 * some people create inofficial branches. These branches create
+	 * some people create unofficial branches. These branches create
 	 * problems but the initiators do not give support and thus cause the
 	 * development of the official cdrecord versions to slow down because
 	 * I am loaded with unneeded work.
@@ -452,7 +452,7 @@ main(ac, av)
 #if	defined(SOURCE_MODIFIED) || !defined(IS_SCHILY_XCONFIG)
 #define	INSERT_YOUR_EMAIL_ADDRESS_HERE
 #define	NO_SUPPORT	0
-		printf(_("NOTE: this version of cdrecord is an inofficial (modified) release of cdrecord\n"));
+		printf(_("NOTE: this version of cdrecord is an unofficial (modified) release of cdrecord\n"));
 		printf(_("      and thus may have bugs that are not present in the original version.\n"));
 #if	NO_SUPPORT
 		printf(_("      The author of the modifications decided not to provide a support e-mail\n"));
@@ -649,7 +649,7 @@ main(ac, av)
 		printf(_("Using libscg version '%s-%s'.\n"), auth, vers);
 		if (auth == 0 || strcmp("schily", auth) != 0) {
 			errmsgno(EX_BAD,
-			_("Warning: using inofficial version of libscg (%s-%s '%s').\n"),
+			_("Warning: using unofficial version of libscg (%s-%s '%s').\n"),
 				auth, vers, scg_version(0, SCG_SCCS_ID));
 		}
 
@@ -659,7 +659,7 @@ main(ac, av)
 			error(_("Using libscg transport code version '%s-%s'\n"), auth, vers);
 		if (auth == 0 || strcmp("schily", auth) != 0) {
 			errmsgno(EX_BAD,
-			_("Warning: using inofficial libscg transport code version (%s-%s '%s').\n"),
+			_("Warning: using unofficial libscg transport code version (%s-%s '%s').\n"),
 				auth, vers, scg_version(scgp, SCG_SCCS_ID));
 		}
 
@@ -669,7 +669,7 @@ main(ac, av)
 			error(_("Using remote transport code version '%s-%s'\n"), auth, vers);
 		if (auth != 0 && strcmp("schily", auth) != 0) {
 			errmsgno(EX_BAD,
-			_("Warning: using inofficial remote transport code version (%s-%s '%s').\n"),
+			_("Warning: using unofficial remote transport code version (%s-%s '%s').\n"),
 				auth, vers, scg_version(scgp, SCG_RSCCS_ID));
 		}
 	}
@@ -1325,7 +1325,7 @@ main(ac, av)
 				errmsgno(EX_BAD,
 				_("WARNING: 'CDR_FORCESPEED=' is set.\n"));
 				errmsgno(EX_BAD,
-				_("WARNING: Use 'driveropts=burnfree' to avoid buffer underuns.\n"));
+				_("WARNING: Use 'driveropts=burnfree' to avoid buffer underruns.\n"));
 			}
 			max_dma = dma_speed;
 		}
@@ -1643,7 +1643,7 @@ main(ac, av)
 				errmsgno(EX_BAD,
 				_("Make sure that you are root, enable DMA and check your HW/OS set up.\n"));
 			} else {
-				errmsgno(EX_BAD, _("A write error occured.\n"));
+				errmsgno(EX_BAD, _("A write error occurred.\n"));
 				errmsgno(EX_BAD, _("Please properly read the error message above.\n"));
 			}
 			errs++;

@@ -44,7 +44,7 @@ open_cdrdefaults()
 	 * change the documentation and add a statement that makes clear
 	 * where the official location of the file is why you did choose a
 	 * nonstandard location and that the nonstandard location only refers
-	 * to inofficial cdrecord versions.
+	 * to unofficial cdrecord versions.
 	 *
 	 * I was forced to add this because some people change cdrecord without
 	 * rational reason and then publish the result. As those people

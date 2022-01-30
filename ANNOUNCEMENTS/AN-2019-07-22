@@ -107,7 +107,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 	handler is enabled. This separates memory allocation from printing and
 	avoids the recursive malloc() enter.
 
-	The problem occured only when aborting a make run via ^C that caused to
+	The problem occurred only when aborting a make run via ^C that caused to
 	call a callback routine for SIGINT that could call a recursive malloc().
 	We now prepare that data using the new function dir_enter_leave() before
 	a SIGINT could hit in order to avoid this problem.

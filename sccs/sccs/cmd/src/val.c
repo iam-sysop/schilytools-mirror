@@ -834,7 +834,7 @@ register struct packet *pkt;
 }
 
 
-/* This function will report the error that occured on the command
+/* This function will report the error that occurred on the command
  * line.  It will print one diagnostic message for each error that
  * was found in the named file.
 */

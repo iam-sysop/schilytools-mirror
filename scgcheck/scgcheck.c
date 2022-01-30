@@ -458,7 +458,7 @@ checkversion(scgp)
 	chkprint(_("Using libscg version '%s-%s'\n"), auth, vers);
 	if (auth == 0 || strcmp("schily", auth) != 0) {
 		errmsgno(EX_BAD,
-		_("Warning: using inofficial version of libscg (%s-%s '%s').\n"),
+		_("Warning: using unofficial version of libscg (%s-%s '%s').\n"),
 			auth, vers, scg_version(0, SCG_SCCS_ID));
 	}
 
@@ -469,7 +469,7 @@ checkversion(scgp)
 	fprintf(logfile, _("Using libscg transport code version '%s-%s'\n"), auth, vers);
 	if (auth == 0 || strcmp("schily", auth) != 0) {
 		errmsgno(EX_BAD,
-		_("Warning: using inofficial libscg transport code version (%s-%s '%s').\n"),
+		_("Warning: using unofficial libscg transport code version (%s-%s '%s').\n"),
 			auth, vers, scg_version(scgp, SCG_SCCS_ID));
 	}
 	vers = scg_version(scgp, SCG_KVERSION);
@@ -484,7 +484,7 @@ checkversion(scgp)
 
 	if (auth != 0 && strcmp("schily", auth) != 0) {
 		errmsgno(EX_BAD,
-		_("Warning: using inofficial remote transport code version (%s-%s '%s').\n"),
+		_("Warning: using unofficial remote transport code version (%s-%s '%s').\n"),
 			auth, vers, scg_version(scgp, SCG_RSCCS_ID));
 	}
 	if (auth == NULL)

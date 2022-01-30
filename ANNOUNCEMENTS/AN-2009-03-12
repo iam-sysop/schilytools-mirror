@@ -92,7 +92,7 @@ New features with AN-2009-03-12:
 	isodump, isovfy and isoinfo as newer Rock Ridge standard versions removed RR.
 
 -	Try to exit(excode) in readcd instead of exit(0)  in case that siginificant
-	problems occured.
+	problems occurred.
 
 -	Prevent readcd from dumping core via raisecond("file_write_err")->abort()
 	in case that the target filesystem fills up.

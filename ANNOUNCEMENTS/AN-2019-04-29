@@ -184,7 +184,7 @@ programs now (hopefully) call gettext() for all strings that need localization.
 
 	caused the shell not to print "survived" because a previous exception
 	for SIGSEGV from the 1977 Bourne Shell version had not been removed
-	for the POSIX variant of the shell. The problem occured because it
+	for the POSIX variant of the shell. The problem occurred because it
 	was possible to unignore an ignored (at startup) SIGSEGV.
 
 	Thanks to Robert Elz <kre@munnari.OZ.AU> for reporting.
