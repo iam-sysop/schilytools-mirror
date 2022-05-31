@@ -29,7 +29,7 @@ pipeline:
   deps:
     image: ${IMAGE}
     environment:
-    - DEBIAN_FRONTEND: noninteractive
+    - DEBIAN_FRONTEND=noninteractive
     commands:
     - apt install -y e2fslibs-dev
 
