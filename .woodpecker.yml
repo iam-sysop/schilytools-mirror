@@ -2,7 +2,7 @@
 # DEFINITIONS
 ##############################################################################
 
-host_image: &host_image "nativeci/cpp-meson:release-20220513.7"
+host_image: &host_image "nativeci/cpp-meson:latest"
 
 ##############################################################################
 # MATRIX
@@ -12,9 +12,11 @@ matrix:
   # Linux/compilers
   - CC: gcc
     CXX: g++
+    CCOM: gcc
     IMAGE: *host_image
   - CC: clang
     CXX: clang++
+    CCOM: clang
     IMAGE: *host_image
 
 
@@ -40,7 +42,7 @@ pipeline:
   build:
     image: ${IMAGE}
     commands:
-    - make
+    - ./Gmake.linux
 
 
   ############################################################################
@@ -49,4 +51,4 @@ pipeline:
   test:
     image: ${IMAGE}
     commands:
-    - make tests
+    - ./Gmake.linuxtests
