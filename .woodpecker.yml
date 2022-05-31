@@ -31,7 +31,7 @@ pipeline:
     environment:
     - DEBIAN_FRONTEND=noninteractive
     commands:
-    - apt install -y e2fslibs-dev
+    - apt-get install -y libext2fs-dev
 
   ############################################################################
   # Build
