@@ -28,8 +28,10 @@ pipeline:
 
   deps:
     image: ${IMAGE}
+    environment:
+    - DEBIAN_FRONTEND: noninteractive
     commands:
-    - true
+    - apt install -y e2fslibs-dev
 
   ############################################################################
   # Build
