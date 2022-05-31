@@ -31,6 +31,7 @@ pipeline:
     environment:
     - DEBIAN_FRONTEND=noninteractive
     commands:
+    - apt-get update -y
     - apt-get install -y libext2fs-dev
 
   ############################################################################
