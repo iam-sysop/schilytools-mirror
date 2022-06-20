@@ -1,0 +1,1043 @@
+From: Friedhelm Mehnert <friedhelm@friedhelms.net>
+Date: Mon, 20 Jun 2022 06:10:30 +0200
+Subject: more spelling errors
+
+---
+ btcflash/btcflash.1                     |  2 +-
+ cdda2wav/README                         |  2 +-
+ cdda2wav/cdda2wav.1                     |  2 +-
+ cdrecord/cdrecord.1                     |  2 +-
+ libscg/scsi-atari.c                     |  2 +-
+ libscg/scsi-beos.c                      |  2 +-
+ libscg/scsi-dos.c                       | 10 +++++-----
+ libscg/scsi-linux-ata.c                 |  6 +++---
+ libscg/scsi-linux-sg.c                  |  6 +++---
+ libscg/scsi-unixware.c                  |  2 +-
+ libscg/scsi-wnt.c                       | 14 +++++++-------
+ libscg/scsitransp.c                     |  2 +-
+ mkisofs/diag/isodebug.c                 |  2 +-
+ mkisofs/mkisofs.8                       |  2 +-
+ obosh/obosh.1                           |  2 +-
+ patch/patch.1                           |  2 +-
+ readcd/readcd.1                         |  2 +-
+ sccs/man/sccs-add.1                     |  2 +-
+ sccs/man/sccs-admin.1                   |  2 +-
+ sccs/man/sccs-branch.1                  |  2 +-
+ sccs/man/sccs-cdc.1                     |  2 +-
+ sccs/man/sccs-clean.1                   |  2 +-
+ sccs/man/sccs-comb.1                    |  2 +-
+ sccs/man/sccs-commit.1                  |  2 +-
+ sccs/man/sccs-create.1                  |  2 +-
+ sccs/man/sccs-cvt.1                     |  2 +-
+ sccs/man/sccs-delget.1                  |  2 +-
+ sccs/man/sccs-delta.1                   |  2 +-
+ sccs/man/sccs-diffs.1                   |  2 +-
+ sccs/man/sccs-edit.1                    |  2 +-
+ sccs/man/sccs-editor.1                  |  2 +-
+ sccs/man/sccs-fix.1                     |  2 +-
+ sccs/man/sccs-get.1                     |  2 +-
+ sccs/man/sccs-help.1                    |  2 +-
+ sccs/man/sccs-histfile.1                |  2 +-
+ sccs/man/sccs-init.1                    |  2 +-
+ sccs/man/sccs-istext.1                  |  2 +-
+ sccs/man/sccs-log.1                     |  2 +-
+ sccs/man/sccs-print.1                   |  2 +-
+ sccs/man/sccs-prs.1                     |  2 +-
+ sccs/man/sccs-prt.1                     |  2 +-
+ sccs/man/sccs-rcs2sccs.1                |  2 +-
+ sccs/man/sccs-remove.1                  |  2 +-
+ sccs/man/sccs-rename.1                  |  2 +-
+ sccs/man/sccs-rmdel.1                   |  2 +-
+ sccs/man/sccs-root.1                    |  6 +++---
+ sccs/man/sccs-sact.1                    |  2 +-
+ sccs/man/sccs-sccsdiff.1                |  2 +-
+ sccs/man/sccs-status.1                  |  2 +-
+ sccs/man/sccs-tell.1                    |  2 +-
+ sccs/man/sccs-unedit.1                  |  2 +-
+ sccs/man/sccs-unget.1                   |  2 +-
+ sccs/man/sccs-val.1                     |  2 +-
+ sccs/man/sccs.1                         |  2 +-
+ sccs/man/vc.1                           |  2 +-
+ sccs/man/what.1                         |  2 +-
+ scgskeleton/scgskeleton.1               |  2 +-
+ sformat/sformat.1                       |  2 +-
+ sh/sh.1                                 |  2 +-
+ star/star.4                             |  2 +-
+ sunpro/Make/bin/make/common/dmake.1     |  2 +-
+ sunpro/Make/bin/make/common/make.1s     |  2 +-
+ sunpro/Make/bin/make/common/sysV-make.1 |  2 +-
+ ved/ved.1                               |  2 +-
+ 64 files changed, 80 insertions(+), 80 deletions(-)
+
+diff --git a/btcflash/btcflash.1 b/btcflash/btcflash.1
+index 19698b3..970b300 100644
+--- a/btcflash/btcflash.1
++++ b/btcflash/btcflash.1
+@@ -280,7 +280,7 @@ slows down the process.
+ Specify the filename where the firmware should be read from.
+ .TP
+ .B \-scanbus
+-Scan all SCSI devices on all SCSI busses and print the inquiry
++Scan all SCSI devices on all SCSI buses and print the inquiry
+ strings. This option may be used to find SCSI address of the
+ devices on a system.
+ The numbers printed out as labels are computed by:
+diff --git a/cdda2wav/README b/cdda2wav/README
+index 9f20088..36a3ff1 100644
+--- a/cdda2wav/README
++++ b/cdda2wav/README
+@@ -33,7 +33,7 @@ For parallel port cdroms under Linux
+     while the pg driver has no restriction. So you have to use pg for that.
+
+
+-For cdrom drives with proprietary busses under Linux
++For cdrom drives with proprietary buses under Linux
+ 1p. Please check the CDROM-HOWTO for features of the respective
+     drivers. The sbpcd driver is very demanding due to the lack of
+     interrupts.
+diff --git a/cdda2wav/cdda2wav.1 b/cdda2wav/cdda2wav.1
+index b75e59d..e4f2d66 100644
+--- a/cdda2wav/cdda2wav.1
++++ b/cdda2wav/cdda2wav.1
+@@ -1755,7 +1755,7 @@ and
+ .B
+     http://sourceforge.net/projects/cdrtools/files/alpha
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B cdrtools
+ project may be retrieved from:
+ .LP
+diff --git a/cdrecord/cdrecord.1 b/cdrecord/cdrecord.1
+index 1e0aa4a..8aa9d38 100644
+--- a/cdrecord/cdrecord.1
++++ b/cdrecord/cdrecord.1
+@@ -1638,7 +1638,7 @@ Try to reset the SCSI bus where the CD-recorder is located. This does not work
+ on all operating systems.
+ .TP
+ .B \-scanbus
+-Scan all SCSI devices on all SCSI busses and print the inquiry
++Scan all SCSI devices on all SCSI buses and print the inquiry
+ strings. This option may be used to find SCSI address of the
+ CD/DVD/BluRay-recorder on a system.
+ The numbers printed out as labels are computed by:
+diff --git a/libscg/scsi-atari.c b/libscg/scsi-atari.c
+index ca5121b..675dcc5 100644
+--- a/libscg/scsi-atari.c
++++ b/libscg/scsi-atari.c
+@@ -363,7 +363,7 @@ scgo_open(scgp, device)
+
+
+	oldstack = (void *)Super(NULL);
+-	rc_bus = (long)scsicall->InquireSCSI; /* busses available */
++	rc_bus = (long)scsicall->InquireSCSI; /* buses available */
+	/*
+	 * InquireSCSI
+	 */
+diff --git a/libscg/scsi-beos.c b/libscg/scsi-beos.c
+index bb0fdaa..6e98eac 100644
+--- a/libscg/scsi-beos.c
++++ b/libscg/scsi-beos.c
+@@ -282,7 +282,7 @@ LOCAL int
+ scgo_numbus(scgp)
+	SCSI	*scgp;
+ {
+-	return (16);	/* XXX we need a better way to find the # of busses */
++	return (16);	/* XXX we need a better way to find the # of buses */
+ }
+
+ LOCAL BOOL
+diff --git a/libscg/scsi-dos.c b/libscg/scsi-dos.c
+index 0674dc5..35a0bde 100644
+--- a/libscg/scsi-dos.c
++++ b/libscg/scsi-dos.c
+@@ -70,7 +70,7 @@ struct scg_local {
+
+ #define	MAX_DMA_DOS	(63L*1024L)
+
+-LOCAL	BYTE	busses		= 1;
++LOCAL	BYTE	buses		= 1;
+ LOCAL	DWORD	SCSIMgrEntry	= 0;
+ LOCAL	int	AspiLoaded	= 0;
+
+@@ -165,7 +165,7 @@ scgo_open(scgp, device)
+	/*
+	 * More than we have ...
+	 */
+-	if (busno >= busses) {
++	if (busno >= buses) {
+		SCSIMgrClose();
+		return (-1);
+	}
+@@ -223,7 +223,7 @@ LOCAL int
+ scgo_numbus(scgp)
+	SCSI	*scgp;
+ {
+-	return (busses);
++	return (buses);
+ }
+
+ LOCAL __SBOOL
+@@ -231,7 +231,7 @@ scgo_havebus(scgp, busno)
+	SCSI	*scgp;
+	int	busno;
+ {
+-	if (busno < 0 || busno >= busses)
++	if (busno < 0 || busno >= buses)
+		return (FALSE);
+
+	return (TRUE);
+@@ -244,7 +244,7 @@ scgo_fileno(scgp, busno, tgt, tlun)
+	int	tgt;
+	int	tlun;
+ {
+-	if (busno < 0 || busno >= busses ||
++	if (busno < 0 || busno >= buses ||
+	    tgt < 0 || tgt >= MAX_TGT ||
+	    tlun < 0 || tlun >= MAX_LUN)
+		return (-1);
+diff --git a/libscg/scsi-linux-ata.c b/libscg/scsi-linux-ata.c
+index cc50aba..ebe62ba 100644
+--- a/libscg/scsi-linux-ata.c
++++ b/libscg/scsi-linux-ata.c
+@@ -739,7 +739,7 @@ sg_amapdev(scgp, f, device, atapibus, target, lun)
+		!(token[ID_TOKEN_DEV]) ||
+		strcmp(token[ID_TOKEN_DEV], TOKEN_DEV)) {
+
+-		errmsgno(EX_BAD, "ERROR: unknow format\n");
++		errmsgno(EX_BAD, "ERROR: unknown format\n");
+		errmsgno(EX_BAD, "EXAMPLE: /dev/scsi/host1/bus2/target3/lun4/cd\n");
+		errmsgno(EX_BAD, "EXAMPLE: /dev/ide/host0/bus0/target1/lun0/cd\n");
+		errmsgno(EX_BAD, "EXAMPLE: /dev/hda or /dev/sr0\n");
+@@ -840,12 +840,12 @@ sg_amapdev(scgp, f, device, atapibus, target, lun)
+			t = Target;
+			l = Lun;
+		} else {
+-			errmsgno(EX_BAD, "ERROR: unknow subsystem (%s) in (%s)\n",
++			errmsgno(EX_BAD, "ERROR: unknown subsystem (%s) in (%s)\n",
+				token[ID_TOKEN_SUBSYSTEM], device);
+			return (FALSE);
+		}
+	} else {
+-		errmsgno(EX_BAD, "ERROR: unknow subsystem (%s) in (%s)\n",
++		errmsgno(EX_BAD, "ERROR: unknown subsystem (%s) in (%s)\n",
+			token[ID_TOKEN_SUBSYSTEM], device);
+		return (FALSE);
+	}
+diff --git a/libscg/scsi-linux-sg.c b/libscg/scsi-linux-sg.c
+index d5febe6..ad490e0 100644
+--- a/libscg/scsi-linux-sg.c
++++ b/libscg/scsi-linux-sg.c
+@@ -169,7 +169,7 @@ LOCAL	char	_scg_trans_version[] = "scsi-linux-sg.c-1.98";	/* The version for thi
+
+ /*
+  * XXX Should add extra space in buscookies and scgfiles for a "PP bus"
+- * XXX and for two or more "ATAPI busses".
++ * XXX and for two or more "ATAPI buses".
+  */
+ #define	MAX_SCG		(512-MAX_ATA)	/* Max # of SCSI controllers */
+ #define	MAX_ATA		13		/* Max # of ATA devices */
+@@ -177,7 +177,7 @@ LOCAL	char	_scg_trans_version[] = "scsi-linux-sg.c-1.98";	/* The version for thi
+ #define	MAX_LUN		8
+
+ #if	(MAX_SCG+MAX_ATA) >= 1000
+-error too many SCSI busses
++error too many SCSI buses
+ #endif
+
+ #ifdef	USE_ATAPI
+@@ -831,7 +831,7 @@ sg_mapbus(scgp, busno, ino)
+		/*
+		 * SCSI_IOCTL_GET_BUS_NUMBER worked.
+		 * Now we have the problem that Linux does not properly number
+-		 * SCSI busses. The Bus number that Linux creates really is
++		 * SCSI buses. The Bus number that Linux creates really is
+		 * the controller (card) number. I case of multi SCSI bus
+		 * cards we are lost.
+		 */
+diff --git a/libscg/scsi-unixware.c b/libscg/scsi-unixware.c
+index ef88567..c779a4a 100644
+--- a/libscg/scsi-unixware.c
++++ b/libscg/scsi-unixware.c
+@@ -54,7 +54,7 @@ static	char __sccsid[] =
+  */
+ LOCAL	char	_scg_trans_version[] = "scsi-unixware.c-1.39";	/* The version for this transport*/
+
+-/* Max. number of scg scsibusses.  The real limit would be		*/
++/* Max. number of scg scsibuses.  The real limit would be		*/
+ /* MAX_HBA * MAX_BUS (which would be 32 * 8 on UnixWare 2.1/7.x),	*/
+ /* but given that we will hardly see such a beast, lets take 32		*/
+
+diff --git a/libscg/scsi-wnt.c b/libscg/scsi-wnt.c
+index fd7e7da..628294b 100644
+--- a/libscg/scsi-wnt.c
++++ b/libscg/scsi-wnt.c
+@@ -94,7 +94,7 @@ struct scg_local {
+ /*
+  * Local variables
+  */
+-LOCAL	int	busses;
++LOCAL	int	buses;
+ LOCAL	DWORD	(*pfnGetASPI32SupportInfo)(void)		= NULL;
+ LOCAL	DWORD	(*pfnSendASPI32Command)(LPSRB)			= NULL;
+ LOCAL	BOOL	(*pfnGetASPI32Buffer)(PASPI32BUFF)		= NULL;
+@@ -904,7 +904,7 @@ devok:
+	/*
+	 * More than we have ...
+	 */
+-	if (busno >= busses) {
++	if (busno >= buses) {
+		close_driver();
+		return (-1);
+	}
+@@ -962,7 +962,7 @@ LOCAL int
+ scgo_numbus(scgp)
+	SCSI	*scgp;
+ {
+-	return (busses);
++	return (buses);
+ }
+
+ LOCAL __SBOOL
+@@ -970,7 +970,7 @@ scgo_havebus(scgp, busno)
+	SCSI	*scgp;
+	int	busno;
+ {
+-	if (busno < 0 || busno >= busses)
++	if (busno < 0 || busno >= buses)
+		return (FALSE);
+
+	return (TRUE);
+@@ -983,7 +983,7 @@ scgo_fileno(scgp, busno, tgt, tlun)
+	int	tgt;
+	int	tlun;
+ {
+-	if (busno < 0 || busno >= busses ||
++	if (busno < 0 || busno >= buses ||
+	    tgt < 0 || tgt >= MAX_TGT ||
+	    tlun < 0 || tlun >= MAX_LUN)
+		return (-1);
+@@ -1529,14 +1529,14 @@ open_driver(scgp)
+		js_fprintf((FILE *)scgp->errfile, "ASPIStatus == 0x%02X", ASPIStatus);
+		return (FALSE);
+	}
+-	busses = HACount;
++	buses = HACount;
+
+ #ifdef DEBUG_WNTASPI
+	js_fprintf((FILE *)scgp->errfile, "open_driver HostASPIStatus=0x%x HACount=0x%x\n", ASPIStatus, HACount);
+	js_fprintf((FILE *)scgp->errfile, "leaving open_driver\n");
+ #endif
+
+-	for (i = 0; i < busses; i++) {
++	for (i = 0; i < buses; i++) {
+		SRB_HAInquiry	s;
+
+		ha_inquiry(scgp, i, &s);
+diff --git a/libscg/scsitransp.c b/libscg/scsitransp.c
+index 657390b..dd8f99d 100644
+--- a/libscg/scsitransp.c
++++ b/libscg/scsitransp.c
+@@ -265,7 +265,7 @@ scg_freebuf(scgp)
+ }
+
+ /*
+- * Return the max. number of SCSI busses.
++ * Return the max. number of SCSI buses.
+  */
+ EXPORT BOOL
+ scg_numbus(scgp)
+diff --git a/mkisofs/diag/isodebug.c b/mkisofs/diag/isodebug.c
+index b267367..3f829b3 100644
+--- a/mkisofs/diag/isodebug.c
++++ b/mkisofs/diag/isodebug.c
+@@ -130,7 +130,7 @@ usage(excode)
+	error(_("\t-ignore-error Ignore errors\n"));
+	error(_("\t-i filename	Filename to read ISO-9660 image from\n"));
+	error(_("\tdev=target	SCSI target to use as CD/DVD-Recorder\n"));
+-	error(_("\nIf neither -i nor dev= are speficied, <image> is needed.\n"));
++	error(_("\nIf neither -i nor dev= are specified, <image> is needed.\n"));
+	exit(excode);
+ }
+
+diff --git a/mkisofs/mkisofs.8 b/mkisofs/mkisofs.8
+index 305636a..fb48fe2 100644
+--- a/mkisofs/mkisofs.8
++++ b/mkisofs/mkisofs.8
+@@ -3900,7 +3900,7 @@ and
+ .B
+     http://sourceforge.net/projects/cdrtools/files/alpha
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B cdrtools
+ project may be retrieved from:
+ .LP
+diff --git a/obosh/obosh.1 b/obosh/obosh.1
+index 31eeef9..6944ca2 100644
+--- a/obosh/obosh.1
++++ b/obosh/obosh.1
+@@ -3660,7 +3660,7 @@ Check for the
+ .B schily\-*.tar.bz2
+ archives.
+ .LP
+-Separate project informations for the Schily Bourne Shell project may be retrieved from:
++Separate project information for the Schily Bourne Shell project may be retrieved from:
+ .LP
+ .B
+     http://schilytools.sourceforge.net/bosh.html
+diff --git a/patch/patch.1 b/patch/patch.1
+index 2988508..7deae57 100644
+--- a/patch/patch.1
++++ b/patch/patch.1
+@@ -1175,7 +1175,7 @@ Check for the
+ .B schily\-*.tar.bz2
+ archives.
+ .LP
+-Separate project informations for the Schily Bourne Shell project may be retrieved from:
++Separate project information for the Schily Bourne Shell project may be retrieved from:
+ .LP
+ .B
+     http://schilytools.sourceforge.net/patch.html
+diff --git a/readcd/readcd.1 b/readcd/readcd.1
+index b60bd9e..eb5ae23 100644
+--- a/readcd/readcd.1
++++ b/readcd/readcd.1
+@@ -488,7 +488,7 @@ Tell the
+ to modify the kernel debug value while SCSI commands are running.
+ .TP
+ .B \-scanbus
+-Scan all SCSI devices on all SCSI busses and print the inquiry
++Scan all SCSI devices on all SCSI buses and print the inquiry
+ strings. This option may be used to find SCSI address of the
+ devices on a system.
+ The numbers printed out as labels are computed by:
+diff --git a/sccs/man/sccs-add.1 b/sccs/man/sccs-add.1
+index 2905c44..529aad6 100644
+--- a/sccs/man/sccs-add.1
++++ b/sccs/man/sccs-add.1
+@@ -193,7 +193,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-admin.1 b/sccs/man/sccs-admin.1
+index edf175a..ad8f079 100644
+--- a/sccs/man/sccs-admin.1
++++ b/sccs/man/sccs-admin.1
+@@ -1505,7 +1505,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-branch.1 b/sccs/man/sccs-branch.1
+index 95eae19..342f6c2 100644
+--- a/sccs/man/sccs-branch.1
++++ b/sccs/man/sccs-branch.1
+@@ -379,7 +379,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-cdc.1 b/sccs/man/sccs-cdc.1
+index 7fd4cb2..f8b638f 100644
+--- a/sccs/man/sccs-cdc.1
++++ b/sccs/man/sccs-cdc.1
+@@ -652,7 +652,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-clean.1 b/sccs/man/sccs-clean.1
+index 7fa121f..d59e006 100644
+--- a/sccs/man/sccs-clean.1
++++ b/sccs/man/sccs-clean.1
+@@ -210,7 +210,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-comb.1 b/sccs/man/sccs-comb.1
+index fa4cd46..80119cd 100644
+--- a/sccs/man/sccs-comb.1
++++ b/sccs/man/sccs-comb.1
+@@ -551,7 +551,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-commit.1 b/sccs/man/sccs-commit.1
+index ea099bb..eb5403b 100644
+--- a/sccs/man/sccs-commit.1
++++ b/sccs/man/sccs-commit.1
+@@ -198,7 +198,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-create.1 b/sccs/man/sccs-create.1
+index fd300c6..be991b5 100644
+--- a/sccs/man/sccs-create.1
++++ b/sccs/man/sccs-create.1
+@@ -253,7 +253,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-cvt.1 b/sccs/man/sccs-cvt.1
+index 628b1d4..ce5f63c 100644
+--- a/sccs/man/sccs-cvt.1
++++ b/sccs/man/sccs-cvt.1
+@@ -532,7 +532,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-delget.1 b/sccs/man/sccs-delget.1
+index b010acd..f03c102 100644
+--- a/sccs/man/sccs-delget.1
++++ b/sccs/man/sccs-delget.1
+@@ -308,7 +308,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-delta.1 b/sccs/man/sccs-delta.1
+index 0b65e5e..7700bbf 100644
+--- a/sccs/man/sccs-delta.1
++++ b/sccs/man/sccs-delta.1
+@@ -998,7 +998,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-diffs.1 b/sccs/man/sccs-diffs.1
+index bbcf682..f1a879c 100644
+--- a/sccs/man/sccs-diffs.1
++++ b/sccs/man/sccs-diffs.1
+@@ -273,7 +273,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-edit.1 b/sccs/man/sccs-edit.1
+index ea0bf8b..4b7137d 100644
+--- a/sccs/man/sccs-edit.1
++++ b/sccs/man/sccs-edit.1
+@@ -417,7 +417,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-editor.1 b/sccs/man/sccs-editor.1
+index 15f9203..eb68f2f 100644
+--- a/sccs/man/sccs-editor.1
++++ b/sccs/man/sccs-editor.1
+@@ -222,7 +222,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-fix.1 b/sccs/man/sccs-fix.1
+index a68c719..b8df729 100644
+--- a/sccs/man/sccs-fix.1
++++ b/sccs/man/sccs-fix.1
+@@ -230,7 +230,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-get.1 b/sccs/man/sccs-get.1
+index 6948855..50f7337 100644
+--- a/sccs/man/sccs-get.1
++++ b/sccs/man/sccs-get.1
+@@ -1502,7 +1502,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-help.1 b/sccs/man/sccs-help.1
+index 2b5cc26..3c50091 100644
+--- a/sccs/man/sccs-help.1
++++ b/sccs/man/sccs-help.1
+@@ -300,7 +300,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-histfile.1 b/sccs/man/sccs-histfile.1
+index b11eeba..acf30b1 100644
+--- a/sccs/man/sccs-histfile.1
++++ b/sccs/man/sccs-histfile.1
+@@ -214,7 +214,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-init.1 b/sccs/man/sccs-init.1
+index bffa9ae..08fc4e7 100644
+--- a/sccs/man/sccs-init.1
++++ b/sccs/man/sccs-init.1
+@@ -216,7 +216,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-istext.1 b/sccs/man/sccs-istext.1
+index e97f9b1..f904db8 100644
+--- a/sccs/man/sccs-istext.1
++++ b/sccs/man/sccs-istext.1
+@@ -219,7 +219,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-log.1 b/sccs/man/sccs-log.1
+index bdede65..ea46da9 100644
+--- a/sccs/man/sccs-log.1
++++ b/sccs/man/sccs-log.1
+@@ -452,7 +452,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-print.1 b/sccs/man/sccs-print.1
+index 2a2d5b2..e84ef70 100644
+--- a/sccs/man/sccs-print.1
++++ b/sccs/man/sccs-print.1
+@@ -222,7 +222,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-prs.1 b/sccs/man/sccs-prs.1
+index 6e10f64..dc45d95 100644
+--- a/sccs/man/sccs-prs.1
++++ b/sccs/man/sccs-prs.1
+@@ -781,7 +781,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-prt.1 b/sccs/man/sccs-prt.1
+index bcbeebf..6e283b5 100644
+--- a/sccs/man/sccs-prt.1
++++ b/sccs/man/sccs-prt.1
+@@ -780,7 +780,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-rcs2sccs.1 b/sccs/man/sccs-rcs2sccs.1
+index 0aa853f..22a1533 100644
+--- a/sccs/man/sccs-rcs2sccs.1
++++ b/sccs/man/sccs-rcs2sccs.1
+@@ -271,7 +271,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-remove.1 b/sccs/man/sccs-remove.1
+index 99bdc99..bc4f961 100644
+--- a/sccs/man/sccs-remove.1
++++ b/sccs/man/sccs-remove.1
+@@ -193,7 +193,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-rename.1 b/sccs/man/sccs-rename.1
+index a62f604..6181310 100644
+--- a/sccs/man/sccs-rename.1
++++ b/sccs/man/sccs-rename.1
+@@ -199,7 +199,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-rmdel.1 b/sccs/man/sccs-rmdel.1
+index 275e71c..d2873ec 100644
+--- a/sccs/man/sccs-rmdel.1
++++ b/sccs/man/sccs-rmdel.1
+@@ -564,7 +564,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-root.1 b/sccs/man/sccs-root.1
+index 90dbb2d..963200d 100644
+--- a/sccs/man/sccs-root.1
++++ b/sccs/man/sccs-root.1
+@@ -36,7 +36,7 @@ sccs root
+ .SH DESCRIPTION
+ The
+ .B root
+-subcommand lists informations about the SCCS project set home
++subcommand lists information about the SCCS project set home
+ for the given directory.
+ If no directory argument is given, the current working directory is used.
+ .LP
+@@ -51,7 +51,7 @@ implementations.
+ .LP
+ .TP
+ .B \-v
+-Be verbose and give all informations.
++Be verbose and give all information.
+ Without
+ .B \-v
+ only the name of the proect set home directory is given.
+@@ -199,7 +199,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-sact.1 b/sccs/man/sccs-sact.1
+index f775c4f..71554db 100644
+--- a/sccs/man/sccs-sact.1
++++ b/sccs/man/sccs-sact.1
+@@ -478,7 +478,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-sccsdiff.1 b/sccs/man/sccs-sccsdiff.1
+index ba0cb2b..13414a0 100644
+--- a/sccs/man/sccs-sccsdiff.1
++++ b/sccs/man/sccs-sccsdiff.1
+@@ -405,7 +405,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-status.1 b/sccs/man/sccs-status.1
+index 7d8f87f..65622f7 100644
+--- a/sccs/man/sccs-status.1
++++ b/sccs/man/sccs-status.1
+@@ -194,7 +194,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-tell.1 b/sccs/man/sccs-tell.1
+index b063752..0850123 100644
+--- a/sccs/man/sccs-tell.1
++++ b/sccs/man/sccs-tell.1
+@@ -282,7 +282,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-unedit.1 b/sccs/man/sccs-unedit.1
+index 89a4a41..3ed6a60 100644
+--- a/sccs/man/sccs-unedit.1
++++ b/sccs/man/sccs-unedit.1
+@@ -223,7 +223,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-unget.1 b/sccs/man/sccs-unget.1
+index 56298b8..8ad8750 100644
+--- a/sccs/man/sccs-unget.1
++++ b/sccs/man/sccs-unget.1
+@@ -528,7 +528,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs-val.1 b/sccs/man/sccs-val.1
+index 84542b0..8d630b1 100644
+--- a/sccs/man/sccs-val.1
++++ b/sccs/man/sccs-val.1
+@@ -552,7 +552,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/sccs.1 b/sccs/man/sccs.1
+index cdf24fc..59ca799 100644
+--- a/sccs/man/sccs.1
++++ b/sccs/man/sccs.1
+@@ -2595,7 +2595,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/vc.1 b/sccs/man/vc.1
+index 2a7e66a..85813c0 100644
+--- a/sccs/man/vc.1
++++ b/sccs/man/vc.1
+@@ -483,7 +483,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/sccs/man/what.1 b/sccs/man/what.1
+index 94f979f..b4cceb4 100644
+--- a/sccs/man/what.1
++++ b/sccs/man/what.1
+@@ -324,7 +324,7 @@ suite is at:
+ .B
+     http://sourceforge.net/projects/sccs/files/
+ .LP
+-Separate project informations for the
++Separate project information for the
+ .B SCCS
+ project may be retrieved from:
+ .LP
+diff --git a/scgskeleton/scgskeleton.1 b/scgskeleton/scgskeleton.1
+index da3c649..d772c82 100644
+--- a/scgskeleton/scgskeleton.1
++++ b/scgskeleton/scgskeleton.1
+@@ -272,7 +272,7 @@ or
+ .B \-VV
+ slows down the process.
+ .B \-scanbus
+-Scan all SCSI devices on all SCSI busses and print the inquiry
++Scan all SCSI devices on all SCSI buses and print the inquiry
+ strings. This option may be used to find SCSI address of the
+ devices on a system.
+ The numbers printed out as labels are computed by:
+diff --git a/sformat/sformat.1 b/sformat/sformat.1
+index eef32ed..b4b6c9f 100644
+--- a/sformat/sformat.1
++++ b/sformat/sformat.1
+@@ -29,7 +29,7 @@ Have a look at the chapter about
+ .B "Following The Main Thread
+ for more details.
+ .PP
+-The second form will scan all SCSI busses and enter a selection menu.
++The second form will scan all SCSI buses and enter a selection menu.
+ Have a look at the chapter about
+ .B "The SCSI Selection Menu
+ for more details.
+diff --git a/sh/sh.1 b/sh/sh.1
+index 74b31bd..7ecc4f1 100644
+--- a/sh/sh.1
++++ b/sh/sh.1
+@@ -9162,7 +9162,7 @@ Check for the
+ .B schily\-*.tar.bz2
+ archives.
+ .LP
+-Separate project informations for the Schily Bourne Shell project may be retrieved from:
++Separate project information for the Schily Bourne Shell project may be retrieved from:
+ .LP
+ .B
+     http://schilytools.sourceforge.net/bosh.html
+diff --git a/star/star.4 b/star/star.4
+index fbdf1d0..bb415bb 100644
+--- a/star/star.4
++++ b/star/star.4
+@@ -1037,7 +1037,7 @@ Any keyword that starts with a vendor name in capital letters is reserved
+ for vendor specific extensions
+ by the standard.
+ .B Star
+-uses a lot of these vendor specific extension. See below for more informations.
++uses a lot of these vendor specific extension. See below for more information.
+ .SH "SCHILY PAX EXTENSION KEYWORDS
+ .B Star
+ uses own vendor specific extensions. The
+diff --git a/sunpro/Make/bin/make/common/dmake.1 b/sunpro/Make/bin/make/common/dmake.1
+index 90c3d2d..66741fd 100644
+--- a/sunpro/Make/bin/make/common/dmake.1
++++ b/sunpro/Make/bin/make/common/dmake.1
+@@ -387,7 +387,7 @@ Check for the
+ .B schily\-*.tar.bz2
+ archives.
+ .LP
+-Separate project informations for the Schily SunPro Make project may be retrieved from:
++Separate project information for the Schily SunPro Make project may be retrieved from:
+ .LP
+ .B
+     http://schilytools.sourceforge.net/sunpromake.html
+diff --git a/sunpro/Make/bin/make/common/make.1s b/sunpro/Make/bin/make/common/make.1s
+index c69c38f..42238b5 100644
+--- a/sunpro/Make/bin/make/common/make.1s
++++ b/sunpro/Make/bin/make/common/make.1s
+@@ -5277,7 +5277,7 @@ Check for the
+ .B schily\-*.tar.bz2
+ archives.
+ .LP
+-Separate project informations for the Schily SunPro Make project may be retrieved from:
++Separate project information for the Schily SunPro Make project may be retrieved from:
+ .LP
+ .B
+     http://schilytools.sourceforge.net/sunpromake.html
+diff --git a/sunpro/Make/bin/make/common/sysV-make.1 b/sunpro/Make/bin/make/common/sysV-make.1
+index 8a4469f..5553b5e 100644
+--- a/sunpro/Make/bin/make/common/sysV-make.1
++++ b/sunpro/Make/bin/make/common/sysV-make.1
+@@ -983,7 +983,7 @@ Check for the
+ .B schily\-*.tar.bz2
+ archives.
+ .LP
+-Separate project informations for the Schily SunPro Make project may be retrieved from:
++Separate project information for the Schily SunPro Make project may be retrieved from:
+ .LP
+ .B
+     http://schilytools.sourceforge.net/sunpromake.html
+diff --git a/ved/ved.1 b/ved/ved.1
+index 5f2071b..d212884 100644
+--- a/ved/ved.1
++++ b/ved/ved.1
+@@ -3389,7 +3389,7 @@ Check for the
+ .B schily\-*.tar.bz2
+ archives.
+ .LP
+-Separate project informations for the Schily ved project may be retrieved from:
++Separate project information for the Schily ved project may be retrieved from:
+ .LP
+ .B
+     http://schilytools.sourceforge.net/ved.html
