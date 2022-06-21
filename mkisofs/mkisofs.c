@@ -1153,7 +1153,7 @@ LOCAL const struct mki_option mki_options[] =
 	{{"c* ,eltorito-catalog*", &boot_catalog },
 	__("\1FILE\1Set El Torito boot catalog name")},
 	{{"C*,cdrecord-params*", &cdrecord_data },
-	__("\1PARAMS\1Magic paramters from cdrecord")},
+	__("\1PARAMS\1Magic parameters from cdrecord")},
 	{{"d,omit-period", &omit_period },
 	__("Omit trailing periods from filenames (violates ISO9660)")},
 	{{"data-change-warn", &data_change_warn },
@@ -2774,8 +2774,8 @@ Copyright (C) 1997-2020 %s\n"),
 		error(_("Warning: ISO-9660 filenames longer than %d may cause buffer overflows in the OS.\n"),
 			LEN_ISONAME);
 	if (use_Joliet && !use_RockRidge) {
-		error(_("Warning: creating filesystem with (nonstandard) Joliet extensions\n"));
-		error(_("         but without (standard) Rock Ridge extensions.\n"));
+		error(_("Warning: creating filesystem with Joliet extensions\n"));
+		error(_("         but without Rock Ridge extensions.\n"));
 		error(_("         It is highly recommended to add Rock Ridge\n"));
 	}
 	if (transparent_compression) {
