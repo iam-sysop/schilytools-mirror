@@ -25,30 +25,12 @@ matrix:
 ##############################################################################
 
 pipeline:
-  ############################################################################
-  # Dependencies
-
-  deps:
+  build:
     image: ${IMAGE}
     environment:
     - DEBIAN_FRONTEND=noninteractive
     commands:
     - apt-get update -y
     - apt-get install -y libext2fs-dev
-
-  ############################################################################
-  # Build
-
-  build:
-    image: ${IMAGE}
-    commands:
     - ./Gmake.linux
-
-
-  ############################################################################
-  # Tests
-
-  test:
-    image: ${IMAGE}
-    commands:
     - ./Gmake.linux tests
