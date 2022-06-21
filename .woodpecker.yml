@@ -51,4 +51,4 @@ pipeline:
   test:
     image: ${IMAGE}
     commands:
-    - ./Gmake.linuxtests
+    - ./Gmake.linux tests
