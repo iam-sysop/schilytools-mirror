@@ -8,6 +8,7 @@ static	UConst char sccsid[] =
  * SHA2 hash code taken from OpenBSD
  *
  * Portions Copyright (c) 2009-2015 J. Schilling
+ * Portions Copyright (c) 2022 the schilytools team
  */
 
 /*	$OpenBSD: sha2.c,v 1.13 2009/04/15 00:55:52 djm Exp $	*/
@@ -963,6 +964,30 @@ SHA384Init(context)
 	context->bitcount[0] = context->bitcount[1] = 0;
 }
 
+void
+SHA384Final(digest, context)
+	UInt8_t		digest[SHA384_DIGEST_LENGTH];
+	SHA2_CTX	*context;
+{
+	SHA384Pad(context);
+
+	/* If no digest buffer is passed, we don't bother doing this: */
+	if (digest != NULL) {
+#ifndef	WORDS_BIGENDIAN
+		int	i;
+
+		/* Convert TO host byte order */
+		for (i = 0; i < 6; i++)
+			BE_64_TO_8(digest + i * 8, context->state.st64[i]);
+#else
+		memcpy(digest, context->state.st64, SHA384_DIGEST_LENGTH);
+#endif
+	}
+
+	/* Zero out state data */
+	memset(context, 0, sizeof (*context));
+}
+
 /*
  * The Cygwin compile environment incorrectly implements #pragma weak.
  * The weak symbols are only defined as local symbols making it impossible
@@ -999,28 +1024,4 @@ SHA384Pad(context)
 	SHA512Pad(context);
 }
 #endif
-
-void
-SHA384Final(digest, context)
-	UInt8_t		digest[SHA384_DIGEST_LENGTH];
-	SHA2_CTX	*context;
-{
-	SHA384Pad(context);
-
-	/* If no digest buffer is passed, we don't bother doing this: */
-	if (digest != NULL) {
-#ifndef	WORDS_BIGENDIAN
-		int	i;
-
-		/* Convert TO host byte order */
-		for (i = 0; i < 6; i++)
-			BE_64_TO_8(digest + i * 8, context->state.st64[i]);
-#else
-		memcpy(digest, context->state.st64, SHA384_DIGEST_LENGTH);
-#endif
-	}
-
-	/* Zero out state data */
-	memset(context, 0, sizeof (*context));
-}
 #endif /* SHA256_ONLY */

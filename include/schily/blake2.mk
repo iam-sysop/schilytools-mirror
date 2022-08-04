@@ -1,24 +1,16 @@
-#ident "@(#)shlstreamar.mk	1.2 18/05/17 "
+#ident "@(#)blake2s.mk	1.0 04/21/22 "
 ###########################################################################
-# Sample makefile for non-shared libraries
+# Sample makefile for installing non-localized auxiliary files
 ###########################################################################
-SRCROOT=	..
+SRCROOT=	../..
 RULESDIR=	RULES
 include		$(SRCROOT)/$(RULESDIR)/rules.top
 ###########################################################################
 
-SUBARCHDIR=	/pic
-INSDIR=		lib
-TARGETLIB=	streamar
-CPPOPTS +=	-DUSE_LARGEFILES
-CPPOPTS +=	-DUSE_NLS
-CPPOPTS +=	-DUSE_ICONV
-
-include		Targets
-
-LIBS=		$(LIB_ICONV) -lfind -lschily -lc
+INSDIR=		include/schily
+TARGET=		blake2.h
 #XMK_FILE=	Makefile.man
 
 ###########################################################################
-include		$(SRCROOT)/$(RULESDIR)/rules.shl
+include		$(SRCROOT)/$(RULESDIR)/rules.aux
 ###########################################################################
