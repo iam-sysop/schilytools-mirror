@@ -104,7 +104,15 @@ login shell.
 .BR ssh (1),
 .BR rcmd (3)
 
-.\".SH NOTES
+.SH NOTES
+Solaris requires linking against
+.IR libnsl " and " libsocket
+for
+.B librmt
+to work.
+Use
+.I -lnsl -lsocket
+for that purpose.
 .SH BUGS
 .PP
 None currently known.
