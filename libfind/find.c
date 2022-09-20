@@ -9,7 +9,7 @@ static	UConst char sccsid[] =
  *	Another find implementation...
  *
  *	Copyright (c) 2004-2019 J. Schilling
- *	Copyright (c) 2022 The schilytools project authors
+ *	Copyright (c) 2022 the schilytools team
  */
 /*
  * The contents of this file are subject to the terms of the
