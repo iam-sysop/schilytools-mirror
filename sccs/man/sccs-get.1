@@ -32,7 +32,7 @@
 .if n .ds o oe
 .if n .ds u ue
 .if n .ds s sz
-.TH sccs-get 1 "2022/08/04" "SunOS 5.11" "User Commands"
+.TH sccs-get 1 "2022/10/06" "SunOS 5.11" "User Commands"
 .SH NAME
 sccs-get, get \- retrieve a version of an SCCS file
 .SH SYNOPSIS
@@ -1050,7 +1050,7 @@ SpecifiedUsed \fB(2)\fPConditionsRetrievedto be Created
 _
 none \fB(3)\fPnoR defaults to mRmR.mLmR.(mL+1)
 none \fB(3)\fPyesR defaults to mRmR.mLmR.mL.(mB+1).1
-RnoR > mRmR.mLR.1 \fB(4)\fP
+RnoR > mRmR.mLR.1 \fB(5)\fP
 RnoR = mRmR.mLmR.(mL+1)
 RyesR > mRmR.mLmR.mL.(mB+1).1
 RyesR = mRmR.mLmR.mL.(mB+1).1
@@ -1128,7 +1128,7 @@ one of the other cases in this table applies.
 .br
 .ne 3
 .TP
-.B (4)
+.B (5)
 Forces creation of the
 .I first
 delta in a
@@ -1272,7 +1272,7 @@ and
 fields are in the same format as used in the delta table of the
 .BI s. file
 as described in
-.BR sccsfile (4)
+.BR sccsfile (5)
 for
 .B SCCS
 v4.
@@ -1305,7 +1305,7 @@ after completion
 .BI s. file
 .B SCCS
 history file, see
-.BR sccsfile (4).
+.BR sccsfile (5).
 
 .br
 .ne 3
@@ -1423,8 +1423,8 @@ Interface StabilityStandard
 .BR bdiff (1), 
 .BR diff (1), 
 .BR what (1),
-.BR sccschangeset (4),
-.BR sccsfile (4),
+.BR sccschangeset (5),
+.BR sccsfile (5),
 .BR attributes (5),
 .BR environ (5),
 .BR standards (5).
