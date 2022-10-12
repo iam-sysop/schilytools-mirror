@@ -484,9 +484,9 @@ main(ac, av)
 #ifdef	USE_REMOTE
 	rmtdebug(debug);
 
-#ifdef	USE_SSH
 	if (rsh)
 			rmtrsh(rsh);
+#ifdef	USE_SSH
 	else
 			rmtrsh("ssh");
 #endif
