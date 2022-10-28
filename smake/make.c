@@ -79,6 +79,7 @@ LOCAL	void	setup_vars	__PR((void));
 LOCAL	void	setup_MAKE	__PR((char *name));
 EXPORT	char	*searchtype	__PR((int mode));
 LOCAL	void	printdirs	__PR((void));
+LOCAL	void	printvflagmacros	__PR((void));
 LOCAL	int	addcommandline	__PR((char *  name));
 LOCAL	void	addcmdlinedef	__PR((char *  name));
 LOCAL	int	addvflagmacro	__PR((char *  name));
@@ -678,6 +679,29 @@ printdirs()
 }
 
 /*
+ * Print the values of the macros listed in VflagMacros
+ */
+LOCAL void
+printvflagmacros()
+{
+	int	i = 0;
+	char 	*vardef = NULL;
+	char	*expanded = NULL;
+
+	if (VflagMacrossize <= 0 || VflagMacros == NULL)
+		comerr("printvflagmacros called but VflagMacros array is empty");
+
+	for (i = 0; i < VflagMacrossize; ++i) {
+		if (vardef = get_var(VflagMacros[i]))
+			expanded = substitute(vardef, NullObj, NullObj, NULL);
+		else if (strchr(VflagMacros[i], '$') != NULL)
+			expanded = substitute(VflagMacros[i], NullObj, NullObj, NULL);
+
+		printf("%s\n", expanded ? expanded : "");
+	}
+}
+
+/*
  * Check for a command line macro.
  * This is called by getargs().
  */
@@ -1071,6 +1095,11 @@ main(ac, av)
 	on_comerr(exhandler, av[0]);
 	if (Debug > 0)
 		printdirs();	/* .OBJDIR .OBJSEARCH .SEARCHLIST	*/
+
+	if (VflagMacrossize > 0) {	/* -V was specified at least once	*/
+		printvflagmacros();
+		exit(0);	/* Exit here because -V must not start building anything	*/
+	}
 
 	makeincs();		/* Re-make included files */
 	omake(Init, TRUE);	/* Make .INIT target	  */
