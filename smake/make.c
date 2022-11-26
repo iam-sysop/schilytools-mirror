@@ -692,7 +692,12 @@ printvflagmacros()
 		comerr("printvflagmacros called but VflagMacros array is empty");
 
 	for (i = 0; i < VflagMacrossize; ++i) {
-		if (vardef = get_var(VflagMacros[i]))
+		/* Clear both expanded and vardef as they might hold
+		 * values from previous iterations */
+		expanded = NULL;
+		vardef = NULL;
+
+		if ((vardef = get_var(VflagMacros[i])))
 			expanded = substitute(vardef, NullObj, NullObj, NULL);
 		else if (strchr(VflagMacros[i], '$') != NULL)
 			expanded = substitute(VflagMacros[i], NullObj, NullObj, NULL);
