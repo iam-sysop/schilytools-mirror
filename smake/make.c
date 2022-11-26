@@ -759,7 +759,7 @@ scan_cmdline(ac, av)
 	for (i = 1; i < ac; i++) {
 		if (av[i][0] == '-')
 			continue;
-		if (strcmp(av[i-1], "-V") == 0)
+		if (av[i-1][0] == '-' && strchr(av[i-1], 'V') != NULL)
 			continue;
 		if (strchr(av[i], '=') == NULL)
 			continue;
