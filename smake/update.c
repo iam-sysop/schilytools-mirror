@@ -9,6 +9,7 @@ static	UConst char sccsid[] =
  *	Macro handling / Dependency Update
  *
  *	Copyright (c) 1985, 88, 91, 1995-2021 by J. Schilling
+ *	Copyright (c) 2022 by the schilytools team
  */
 /*
  * The contents of this file are subject to the terms of the

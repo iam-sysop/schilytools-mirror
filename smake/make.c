@@ -8,6 +8,7 @@ static	UConst char sccsid[] =
  *	Make program
  *
  *	Copyright (c) 1985, 87, 88, 91, 1995-2021 by J. Schilling
+ *	Copyright (c) 2022 by the schilytools team
  */
 /*
  * The contents of this file are subject to the terms of the
