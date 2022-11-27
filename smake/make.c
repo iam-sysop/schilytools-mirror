@@ -685,21 +685,22 @@ LOCAL void
 printvflagmacros()
 {
 	int	i = 0;
-	char 	*vardef = NULL;
 	char	*expanded = NULL;
 
 	if (VflagMacrossize <= 0 || VflagMacros == NULL)
 		comerr("printvflagmacros called but VflagMacros array is empty");
 
 	for (i = 0; i < VflagMacrossize; ++i) {
-		/* Clear both expanded and vardef as they might hold
-		 * values from previous iterations */
+		/* Clear expanded as it might hold a value from
+		 * previous iterations */
 		expanded = NULL;
-		vardef = NULL;
 
-		if ((vardef = get_var(VflagMacros[i])))
-			expanded = substitute(vardef, NullObj, NullObj, NULL);
-		else if (strchr(VflagMacros[i], '$') != NULL)
+		/* Try to expand the given macro name */
+		expanded = try_expand_name(VflagMacros[i]);
+
+		/* If it failed but we it contains a $, try to expand
+		 * it as an expression. */
+		if (!expanded && (strchr(VflagMacros[i], '$') != NULL))
 			expanded = substitute(VflagMacros[i], NullObj, NullObj, NULL);
 
 		printf("%s\n", expanded ? expanded : "");
