@@ -71,6 +71,7 @@ LOCAL	void	sub_put		__PR((char *chunk, int size));
 LOCAL	void	sub_c_put	__PR((int c));
 LOCAL	void	sub_s_put	__PR((char *chunk));
 LOCAL	BOOL	sub_arg		__PR((int n, list_t * depends, obj_t * target));
+EXPORT	char	*try_expand_name	__PR((char *name));
 EXPORT	char	*substitute	__PR((char *cmd, obj_t * obj, obj_t * source, char *suffix));
 LOCAL	char	*subst		__PR((char *cmd, obj_t * obj, obj_t * source, char *suffix, list_t * depends));
 LOCAL	char	*dynmac		__PR((char *cmd, obj_t * obj, obj_t * source, char *suffix, list_t * depends, BOOL  domod));
@@ -1383,6 +1384,35 @@ out:
 	if (pp)
 		free(pp);
 	return (s);
+}
+
+/*
+ * Search for a macro of the given name and if found expand it fully.
+ *
+ * Only called by printvflagmacros (make.c).
+ */
+EXPORT char *
+try_expand_name(name)
+	char *name;
+{
+	obj_t *mdef = NULL;	/* Macro definition object */
+	char  *sp = sub_ptr;	/* Start of the growable string buffer */
+	list_t depends;		/* For implicit dependency macro $< */
+
+	/* Check if a macro with the name is defined */
+	mdef = objlook(name, FALSE);
+	if (!mdef)
+		return (NULL);
+
+	/* There cannot be an implicit source in this case */
+	depends.l_obj = NullObj;
+	depends.l_next = NULL;
+
+	/* Do the expansion */
+	exp_name(name, NullObj, NullObj, NULL, &depends, "");
+
+	/* Result is in the growable string buffer */
+	return (sp);
 }
 
 /*

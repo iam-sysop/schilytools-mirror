@@ -311,6 +311,7 @@ extern	char	*shout		__PR((char * cmd));
 extern	BOOL	domake		__PR((char * name));
 extern	BOOL	omake		__PR((obj_t * obj, BOOL  must_exist));
 extern	BOOL	xmake		__PR((char * name, BOOL  must_exist));
+extern	char	*try_expand_name	__PR((char * name));
 
 /*
  * memory.c
