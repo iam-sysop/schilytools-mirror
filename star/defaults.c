@@ -352,12 +352,14 @@ star_get_compress_cmd_flags(prog_name)
 
 	cfg_value = defltread(cfg_name);
 	free(cfg_name);
+#ifdef DEBUG
 	if (cfg_value == NULL) {
 		error("star_get_compress_cmd_flag call! no config value found for prog: '%s', cfg_name: '%s'\n", prog_name, cfg_name);
 		return NULL;
 	}
 
 	error("star_get_compress_cmd_flag call! prog_name: '%s', cfg_name: '%s', cfg_value: '%s'\n", prog_name, cfg_name, cfg_value);
+#endif
 	return cfg_value;
 }
 
@@ -389,12 +391,14 @@ star_get_decompress_cmd_flags(prog_name)
 		return (NULL);
 
 	cfg_value = defltread(cfg_name);
+#ifdef DEBUG
 	if (cfg_value == NULL) {
 		error("star_get_decompress_cmd_flag call! no config value found for prog: '%s', cfg_name: '%s'\n", prog_name, cfg_name);
 		return NULL;
 	}
 
 	error("star_get_decompress_cmd_flag call! prog_name: '%s', cfg_name: '%s', cfg_value: '%s'\n", prog_name, cfg_name, cfg_value);
+#endif
 	return cfg_value;
 }
 
@@ -422,10 +426,12 @@ get_args_for_compress(alg, argv, argmax)
 		}
 		argv[argmax] = NULL;
 	}
+#ifdef DEBUG
 	for (int i=0; i< argmax; i++) {
 		if (argv[i] != NULL)
 			error("arg %d: %s\n", i, argv[i]);
 	}
+#endif
 	return 0;
 }
 
@@ -452,9 +458,11 @@ get_args_for_decompress(alg, argv, argmax)
 		}
 		argv[argmax] = NULL;
 	}
+#ifdef DEBUG
 	for (int i=0; i< argmax; i++) {
 		if (argv[i] != NULL)
 			error("arg %d: %s\n", i, argv[i]);
 	}
+#endif
 	return 0;
 }
