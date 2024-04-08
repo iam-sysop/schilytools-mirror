@@ -26,6 +26,7 @@
  */
 /*
  * Copyright 2006-2020 J. Schilling
+ * Copyright 2024 the schilytools team
  *
  * @(#)strptim.c	1.14 20/09/06 J. Schilling
  */
@@ -132,8 +133,9 @@ mystrptime(p, t, val)
 #endif
 
 #if defined(BUG_1205145) || defined(GMT_TIME)
+		t->tm_wday = -1;
 		gtime = mktime(t);		/* local time -> GMT time_t */
-		if (gtime == -1) return(-1);
+		if (t->tm_wday == -1) return(-1);
 		*t = *(gmtime(&gtime));		/* GMT time_t -> GMT tm *   */
 #endif
 	} else {

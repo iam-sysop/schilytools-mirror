@@ -6,6 +6,7 @@ static	UConst char sccsid[] =
 #endif
 /*
  *	Copyright (c) 1997-2020 J. Schilling
+ *	Copyright (c) 2024 the schilytools team
  */
 /*
  * The contents of this file are subject to the terms of the
@@ -710,6 +711,7 @@ dofile(name)
 				tm.tm_year += 100;
 			tm.tm_isdst = -1;		/* let mktime() do it */
 			tm.tm_mon -= 1;
+			tm.tm_wday = -1;
 			seterrno(0);
 			if (tm.tm_year >= 138 &&	/* >= year 2038 && */
 			    sizeof (t) < sizeof (lt)) {	/* 32 bit time_t */
@@ -741,11 +743,8 @@ dofile(name)
 					lt = t = mktime(&tm);
 				}
 			}
-			/*
-			 * Be careful, on IRIX mktime() sets errno but
-			 * returns a time_t != -1.
-			 */
-			if (t == (time_t)-1 && geterrno() != 0) {
+
+			if (tm.tm_wday == -1) {
 				comerr("Cannot convert date '%s' from '%s'.\n",
 				p, name);
 			}

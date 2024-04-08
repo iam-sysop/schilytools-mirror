@@ -11,6 +11,8 @@
  */
 /*
  * @(#)xmktime.c	1.2 19/05/15 Copyright 2007-2019 J. Schilling
+ *
+ * Copyright (c) 2024 the schilytools team
  */
 #if defined(sun)
 #pragma ident "@(#)xmktime.c 1.2 19/05/15 J. Schilling"
@@ -57,6 +59,7 @@ xmktime(tm)
 	int	oerr = errno;
 
 	errno = 0;
+	tm->tm_wday = -1;
 	if (tm->tm_year >= 166) {	/* 2066 */
 		tm->tm_year -= 56;	/* 2 * 4 * 7 */
 		t = mktime(tm);
@@ -72,9 +75,12 @@ xmktime(tm)
 	} else {
 		t = mktime(tm);
 	}
-	if (errno)
+	if (tm->tm_wday == -1) {
+		if (errno == 0)
+			errno = EOVERFLOW;
+
 		fatal(gettext("time stamp conversion error (cm19)"));
-	else
+	} else
 		errno = oerr;
 	return (t);
 }

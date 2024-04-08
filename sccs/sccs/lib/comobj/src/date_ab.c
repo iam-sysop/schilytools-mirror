@@ -28,6 +28,7 @@
  */
 /*
  * Copyright 2006-2019 J. Schilling
+ * Copyright 2024 the schilytools team
  *
  * @(#)date_ab.c	1.25 20/07/12 J. Schilling
  */
@@ -151,6 +152,7 @@ int	flags;			/* Flags from packet		*/
 
 	tm.tm_mon -= 1;		/* tm_mon is 0..11 */
 	tm.tm_isdst = -1;	/* let mktime() find out */
+	tm.tm_wday = -1;
 
 	if (*Datep == '.')
 		ns = gns(Datep, &Datep);
@@ -171,7 +173,7 @@ int	flags;			/* Flags from packet		*/
 
 		errno = 0;
 		tim = mktime(&tm);
-		if (errno)
+		if (tm.tm_wday == -1)
 			fatal(gettext("time stamp conversion error (cm19)"));
 		else
 			errno = oerr;

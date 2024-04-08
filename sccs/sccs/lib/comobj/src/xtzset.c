@@ -12,6 +12,8 @@
 /*
  *
  * @(#)xtzset.c	1.7 19/05/15  Copyright 2006-2019 J. Schilling
+ *
+ * Copyright (c) 2024 the schilytools team
  */
 #if defined(sun)
 #pragma ident "@(#)xtzset.c 1.7 19/05/15 J. Schilling"
@@ -79,7 +81,10 @@ xtzset()
 	t -= tm->tm_mon * 30 * 24 * 3600;	/* shift to aprox. winter */
 	tm = gmtime(&t);	/* struct tm from last winter time in GMT */
 	TMCHK();
+	tm->tm_wday = -1;
 	t2 = mktime(tm);	/* GMT assuming tm is local time */
+	if (tm->tm_wday == -1 && errno == 0)
+		errno = EOVERFLOW;
 	tm = localtime(&t);
 	TMCHK();
 	t3 = mktime(tm);	/* t3 should be == t */
