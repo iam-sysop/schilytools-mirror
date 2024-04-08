@@ -12,7 +12,7 @@ static	UConst char sccsid[] =
  *
  * Copyright 1993 Yggdrasil Computing, Incorporated
  * Copyright (c) 1997-2020 J. Schilling
- * Copyright (c) 2022 the schilytools team
+ * Copyright (c) 2022, 2024 the schilytools team
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -891,8 +891,9 @@ get_ldate(opt_arg, valp)
 		ldate_error(opt_arg);
 
 	seterrno(0);
+	tm.tm_wday = -1;
 	t = mktime(&tm);
-	if (t == -1 && geterrno() != 0)
+	if (tm.tm_wday == -1)
 		comerr(_("Date '%s' is out of range.\n"), opt_arg);
 
 	((ldate *)valp)->l_sec = t;
