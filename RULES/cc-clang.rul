@@ -36,7 +36,8 @@ COPTS=		$(CLANG_OPTXX)
 #		-Wtraditional now causes more pain than it helps 
 CWOPTS=		-Wall -Wtraditional
 CWOPTS=		-Wall -Wno-unknown-pragmas \
-		-Wshadow -Wmissing-prototypes -Wstrict-prototypes
+		-Wshadow -Wmissing-prototypes -Wstrict-prototypes \
+		-Wno-deprecated-non-prototype
 COPTOPT=	-O
 COPTDYN=	-fpic
 COPTGPROF=	-pg
