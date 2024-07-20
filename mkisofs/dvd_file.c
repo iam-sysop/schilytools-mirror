@@ -7,7 +7,7 @@ static	UConst char sccsid[] =
 /*
  * DVD_AUD_VID code
  *  Copyright (c) 2002 Olaf Beck - olaf_sc@yahoo.com
- *  Copyright (c) 2002-2015 Jörg Schilling <joerg@schily.net>
+ *  Copyright (c) 2002-2015 JÃ¶rg Schilling <joerg@schily.net>
  */
 /*
  * This program is free software; you can redistribute it and/or modify
@@ -160,6 +160,9 @@ DVDGetFileSet(dvd)
 	int		menu_vob;
 	int		title_vob;
 
+	/* Maximum size of the VMG */
+	int		max_size_vmg;
+
 	/* Arrays keeping the title - filset relationship */
 	int		*sector;
 	int		*title;
@@ -242,6 +245,15 @@ DVDGetFileSet(dvd)
 
 	uniq(sector, title, title_sets_array, sector_sets_array, titles);
 
+	/*
+  	 * Calculate the max_size_vmg
+  	 * should be vmg_last_sector + 1
+  	 * except on buggy DVD where it would be sector_sets_array[0]
+ 	 */
+	max_size_vmg = vmg_ifo->vmgi_mat->vmg_last_sector + 1;
+	if ((title_sets >= 1) && (max_size_vmg > sector_sets_array[0])) {
+		max_size_vmg = sector_sets_array[0];
+	}
 
 	/* Open VIDEO_TS.VOB is present */
 
@@ -251,15 +263,14 @@ DVDGetFileSet(dvd)
 
 	vmg_ifo_file = DVDOpenFile(_dvd, 0, DVD_READ_INFO_FILE);
 
-	if ((vmg_vob_file == 0) && vmg_ifo->vmgi_mat->vmg_last_sector + 1
-			< 2 * DVDFileSize(vmg_ifo_file)) {
+	if ((vmg_vob_file == 0) && max_size_vmg < 2 * DVDFileSize(vmg_ifo_file)) {
 		errmsgno(EX_BAD, _("IFO is not of correct size aborting.\n"));
 		DVDFreeFileSetArrays(sector, title, title_sets_array,
 					sector_sets_array);
 		DVDFreeFileSet(title_set_info);
 		return (0);
-	} else if ((vmg_vob_file != 0) && (vmg_ifo->vmgi_mat->vmg_last_sector
-		    + 1  < 2 * DVDFileSize(vmg_ifo_file) +
+	} else if ((vmg_vob_file != 0) && (max_size_vmg
+		    < 2 * DVDFileSize(vmg_ifo_file) +
 		    DVDFileSize(vmg_vob_file))) {
 		errmsgno(EX_BAD, _("Either VIDEO_TS.IFO or VIDEO_TS.VOB is not of correct size.\n"));
 		DVDFreeFileSetArrays(sector, title, title_sets_array,
@@ -270,10 +281,8 @@ DVDGetFileSet(dvd)
 
 	/* Find the actuall right size of VIDEO_TS.IFO */
 	if (vmg_vob_file == 0) {
-		if (vmg_ifo->vmgi_mat->vmg_last_sector + 1 > 2
-				*  DVDFileSize(vmg_ifo_file)) {
-			ifo = vmg_ifo->vmgi_mat->vmg_last_sector
-				- DVDFileSize(vmg_ifo_file) + 1;
+		if (max_size_vmg > 2 * DVDFileSize(vmg_ifo_file)) {
+			ifo = max_size_vmg - DVDFileSize(vmg_ifo_file);
 		} else {
 			ifo = vmg_ifo->vmgi_mat->vmgi_last_sector + 1;
 		}
@@ -292,14 +301,11 @@ DVDGetFileSet(dvd)
 
 	/* Find the actuall right size of VIDEO_TS.VOB */
 	if (vmg_vob_file != 0) {
-		if (ifo + DVDFileSize(vmg_ifo_file) +
-		    DVDFileSize(vmg_vob_file) - 1 <
-		    vmg_ifo->vmgi_mat->vmg_last_sector) {
-				menu_vob = vmg_ifo->vmgi_mat->vmg_last_sector -
-						ifo - DVDFileSize(vmg_ifo_file) + 1;
+		if (ifo + DVDFileSize(vmg_ifo_file) + DVDFileSize(vmg_vob_file)
+		    < max_size_vmg) {
+			menu_vob = max_size_vmg - ifo - DVDFileSize(vmg_ifo_file);
 		} else {
-			menu_vob = vmg_ifo->vmgi_mat->vmg_last_sector
-			- ifo - DVDFileSize(vmg_ifo_file) + 1;
+			menu_vob = max_size_vmg - ifo - DVDFileSize(vmg_ifo_file);
 		}
 
 		snprintf(temppoint, sizeof (temppoint),
@@ -330,7 +336,7 @@ DVDGetFileSet(dvd)
 		bup = sector_sets_array[0] - menu_vob - ifo;
 	} else {
 		/* Just in case we burn a DVD-Video without any title_sets */
-		bup = vmg_ifo->vmgi_mat->vmg_last_sector + 1 - menu_vob - ifo;
+		bup = max_size_vmg - menu_vob - ifo;
 	}
 
 	/* Never trust the BUP file - use a copy of the IFO */
