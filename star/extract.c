@@ -323,6 +323,7 @@ extern	struct WALK walkstate;
 			errmsgno(EX_BAD, "Exiting as -one-file was specified\n");
 			break;
 		}
+		finfo_free_f_name(&finfo);
 	}
 #ifdef	USE_FIND
 	if (dofind) {

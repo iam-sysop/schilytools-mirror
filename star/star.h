@@ -665,6 +665,8 @@ typedef	struct	{
 
 } FINFO;
 
+extern void finfo_free_f_name __PR((FINFO * info));
+
 /*
  * We use offsetof(FINFO, f_pname) to compute the size of the first part
  * of FINFO that may be copied without breaking things. This is needed for
@@ -733,6 +735,7 @@ typedef	struct	{
 #define	XF_REALSIZE	0x40000	/* Dateigröße wenn > 8 GB		  */
 #define	XF_OFFSET	0x80000	/* Multi Volume Offset			  */
 #define	XF_XATTR	0x100000 /* Extended Attributes			  */
+#define XF_FREE_NAME    0x200000 /* Need to free name	                  */
 
 #define	XF_NOTIME    0x10000000	/* Keine extended Zeiten		  */
 #define	XF_BINARY    0x20000000	/* Binary path/usr/group in x-header	  */

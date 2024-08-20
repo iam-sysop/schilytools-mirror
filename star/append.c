@@ -97,6 +97,7 @@ skipall()
 			hash_add(&finfo);
 
 		void_file(&finfo);
+		finfo_free_f_name(&finfo);
 	}
 	if (debug)
 		error("used %d bytes for update cache.\n", cachesize);

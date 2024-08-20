@@ -186,6 +186,7 @@ extern	struct WALK walkstate;
 			goto cont;
 		}
 		diff_tcb(&finfo);
+		finfo_free_f_name(&finfo);
 	cont:
 		if (get_tcb(ptb) == EOF)
 			break;

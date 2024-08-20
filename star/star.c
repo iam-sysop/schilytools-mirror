@@ -3103,3 +3103,15 @@ ttyerr(f)
 	}
 	return (FALSE);
 }
+
+EXPORT void
+finfo_free_f_name(info)
+     FINFO * info;
+{
+	if (info->f_xflags & XF_FREE_NAME) {
+		free(info->f_name);
+		info->f_name = NULL;
+		info->f_namelen = 0;
+		info->f_xflags &= ~XF_FREE_NAME;
+	}
+}

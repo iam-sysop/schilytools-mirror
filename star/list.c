@@ -185,6 +185,7 @@ extern	struct WALK walkstate;
 		}
 		list_file(&finfo);
 		void_file(&finfo);
+		finfo_free_f_name(&finfo);
 	}
 #ifdef	USE_FIND
 	if (dofind) {

@@ -2238,6 +2238,18 @@ static	BOOL	modewarn = FALSE;
 	if (info->f_flags & F_BAD_GID)
 		info->f_mode &= ~TSGID;
 
+	if ((info->f_xflags & XF_PATH) != 0 && is_dir(info)) {
+		if (info->f_namelen == 0)
+			info->f_namelen = strlen(info->f_name);
+		if (info->f_namelen > 0 && info->f_name[info->f_namelen - 1] != '/') {
+			char *new_fname = ___malloc(info->f_namelen + 2, "f_name buffer");
+			strcatl(new_fname, info->f_name, "/", (char *)NULL);
+			info->f_name = new_fname;
+			++info->f_namelen;
+			info->f_xflags |= XF_FREE_NAME;
+		}
+	}
+
 	return (ret);
 }
 
