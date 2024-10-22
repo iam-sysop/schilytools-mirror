@@ -993,9 +993,9 @@ main(ac, av)
 		gtprintf("Smake release %s %s (%s-%s-%s)\n",
 				make_version, VERSION_DATE,
 				HOST_CPU, HOST_VENDOR, HOST_OS);
-		gtprintf("Copyright (C) 1985, 87, 88, 91, 1995-2021 %s\n"
-		         "          (C) 2022-2023                   the schilytools team\n",
+		gtprintf("Copyright (C) 1985, 87, 88, 91, 1995-2021 %s\n",
 				_("Jörg Schilling"));
+		gtprintf("          (C) 2022-2023                   the schilytools team\n");
 		exit(0);
 	}
 	if (maxj > 0 && maxj <= MAXJOBS_MAX)
